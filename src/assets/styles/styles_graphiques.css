@@ -1,0 +1,26 @@
+svg {
+    padding-right: 5px;
+}
+
+.contact .adresse, .contact .tel, .contact .mail {
+    border: solid 3px #D96B2B;
+    margin: 15px;
+    padding: 10px;
+}
+
+.contact svg {
+    color: #D96B2B;
+
+}
+
+.rejoindre button {
+    background-color: #D96B2B;
+    border: none;
+    border-radius: 20px;
+    height: 80px;
+    width: 200px;
+}
+
+.rejoindre a {
+    color: white;
+}

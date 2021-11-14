@@ -1,0 +1,145 @@
+body {
+    margin: 35px 10px 0 10px;
+}
+/*----------Page Association---------*/
+
+.map {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.contact h4, .contact p {
+    text-align: center;
+}
+
+.tel a {
+    display:block;
+    width:130px;
+    margin:0 auto;
+}
+
+.adresse a {
+    display:block;
+    text-align: center;
+}
+
+.svg_mail, .svg_adresse, .svg_tel {
+    width: 50px;
+    margin: 0 auto;
+}
+
+.rejoindre h1, .form_contact h1, .rejoindre p {
+    text-align: center;
+}
+
+.rejoindre {
+    background-color: #EDFCEB;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.rejoindre p {
+    padding: 0 15px 15px 15px;
+}
+
+.button {
+    width: 200px;
+    margin: 0 auto;
+}
+
+/*Formulaire contact-*/
+
+.form_contact {
+    background-color: #4E94BF;
+}
+
+
+.form_contact h1 {
+    margin-top: 0;
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
+
+.h1_form {
+    width: 170px;
+    border-bottom: 3px black solid;
+    margin: 0 auto 15px auto ;
+
+}
+
+.form_contact input, .form_contact textarea {
+    background-color: #4E94BF;
+    border: none;
+    color: black;
+}
+
+::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #000000;
+}
+
+::-ms-input-placeholder {
+    color: #000000;
+}
+
+#contact .prenom, #contact .nom, #contact .adresse, #contact .code_postal, #contact .ville, #contact .mail, #contact .tel {
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    resize: vertical;
+    border-bottom: 1px black solid;
+}
+
+#contact .msg {
+    padding: 20px;
+    margin: 0 auto 25px auto;
+    resize: vertical;
+    width: 80%;
+    height: 150px;
+    border-bottom: 1px black solid;
+}
+
+#contact {
+    padding:20px;
+    /*width: 100%;*/
+    height: 670px;
+    /*max-width: 700px;*/
+    margin:0 auto;
+}
+
+/*---*/
+
+.article {
+    background-color: #064A74;
+    padding: 20px;
+}
+
+.article_1, .article_2 {
+    background-color: white;
+}
+
+.envoyer {
+    margin: 0 auto;
+    position: relative;
+    width: 70px;
+}
+
+.envoyer svg {
+    color: #3773A3;
+}
+
+.envoyer button {
+    border: none;
+    background-color: #F3DFAC;
+    width: 70px;
+    height: 80px;
+
+}
+/*--------*/
+
+/*----------Page Association---------*/

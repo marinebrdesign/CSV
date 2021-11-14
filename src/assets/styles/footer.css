@@ -1,0 +1,44 @@
+footer {
+    background-color: #064A74;
+}
+
+footer h4 {
+    text-align: center;
+    color: white;
+    border: 1px solid #064A74;
+
+}
+
+footer a, ul, .reseaux p {
+    color: white;
+}
+
+.nav {
+    float: left;
+    width: 50%;
+}
+
+footer {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.nav li, ul.reseaux li, .nav_2 li {
+  margin: 5px;
+}
+
+ul.nav_2 {
+    margin-top: 30px;
+}
+
+.nav {
+    margin-bottom: 0;
+}
+
+.article {
+    border: 1px solid #064A74;
+}
+
+.reseaux svg {
+    padding-left: 10px;
+}
