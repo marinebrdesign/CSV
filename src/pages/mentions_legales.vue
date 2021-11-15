@@ -1,9 +1,8 @@
 <template>
   <div>
-        <a href="javascript:history.go(-1)"><i class="fas fa-chevron-left"></i><b>retour</b></a>
-
 <main>
-    <h2>MENTIONS LÉGALES</h2>
+  <a href="javascript:history.go(-1)"><i class="fas fa-chevron-left"></i><b>retour</b></a>
+  <h2>MENTIONS LÉGALES</h2>
     <p>Cette page décrit les mentions légales qui s'appliquent à tout internaute visitant ce site. En le consultant vous vous engagez sans réserve à les respecter. Les mentions légales pouvant être modifiées à tout moment et sans préavis, nous vous engageons à les consulter régulièrement. </p>
 
         <h4>Responsable éditorial et responsable légal</h4>
@@ -67,5 +66,8 @@ export default {
 <style scoped>
   h2 {
     text-align: center;
+  }
+  main {
+    margin: 35px 10px 0 10px;
   }
 </style>

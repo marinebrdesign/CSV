@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a href="javascript:history.go(-1)"><i class="fas fa-chevron-left"></i><b>retour</b></a>
 <main>
-    <h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
+  <a href="javascript:history.go(-1)"><i class="fas fa-chevron-left"></i><b>retour</b></a>
+  <h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
     <p>Dans le cadre de son activité d’association, la Société CSV, représentée par Michel Colney, est amenée à collecter et traiter les données personnelles de ses visiteurs. Les activités pour lesquelles la société est amené à traiter des données sensibles sont les suivantes :
         <br>
         <br>
@@ -155,5 +155,8 @@ export default {
 <style scoped>
 h2 {
   text-align: center;
+}
+main {
+  margin: 35px 10px 0 10px;
 }
 </style>

@@ -1,19 +1,18 @@
 <template>
   <div>
-    <c-header></c-header>
-    <main>
-      <div class="logo">
-        <img src="" alt="logo_CSV">
-        <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
-      </div>
-
+    <div class="image_background">
+      <c-header></c-header>
       <div class="presentation">
+        <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Bienvenue sur le site de l’association Cœuvatte-Suarcine-Vendeline (CSV) :
-          Histoire et patrimoine du sud-territoire de Belfort</p>
-        <svg>flèche</svg>
+          <br>Histoire et patrimoine du sud-territoire de Belfort</p>
+        <div class="fleche">
+          <a href="#actualites"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg></a>
+        </div>
       </div>
-
-      <div class="actualites">
+    </div>
+  <main>
+      <div id="actualites">
         <h2>Actualités</h2>
         <div class="bulletin">
 

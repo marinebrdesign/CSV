@@ -1,5 +1,6 @@
 h1, h2, h3, h4 {
     font-family: Bebas Neue;
+    font-weight: 400;
 }
 
 p, a {
@@ -20,7 +21,6 @@ ul {
 }
 
 .menu a {
-    font-weight: 700;
     font-family: "Bebas Neue";
     font-size: 50px;
 }
@@ -51,4 +51,28 @@ h1 {
 input, textarea {
     font-family: Lato;
     font-size: 16px;
+}
+
+/*------Page liens-----*/
+
+.liens p{
+    font-size: 22px;
+
+}
+
+.liens a {
+    font-size: 15px;
+}
+
+#lien_2 p, #lien_1 p, #lien_3 p, #lien_4 p, #lien_5 p, #lien_6 p , #lien_7 p, #lien_8 p, #lien_9 p, #lien_10 p, #lien_11 p, #lien_12 p, #lien_13 p {
+    color: white;
+    font-weight: bold;
+}
+
+.presentation h1 {
+    color: white;
+}
+
+.presentation p {
+    color: white;
 }

@@ -1,5 +1,7 @@
-body {
-    margin: 35px 10px 0 10px;
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 /*----------Page Association---------*/
 
@@ -142,4 +144,281 @@ body {
 }
 /*--------*/
 
-/*----------Page Association---------*/
+/*----------Présentation---------*/
+
+.presentation h1 {
+    width: 250px;
+    border-bottom: 3px #ffffff solid;
+    margin: 0 auto 50px auto ;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.presentation p {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 20px 40px 20px;
+}
+
+.presentation svg {
+    fill : #FFFFFF;
+    padding: 18px;
+}
+
+.fleche {
+    margin: 0 auto;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    border: none;
+    background-color: #A6A0A0;
+}
+/*--------*/
+
+/*----------Partie découvrez (page communes & liens)---------*/
+
+.degrade {
+    padding-top: 20px;
+    background: linear-gradient(#000000, #0E486D , #064A74);
+}
+
+.decouvrez svg {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.svg_decouvrez {
+    margin: 0 auto;
+    width: 90px;
+}
+
+.decouvrez{
+    background-color: white;
+    width: 80%;
+    border-radius: 20px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+}
+
+.decouvrez a {
+    display:block;
+    text-align:center;
+    padding: 2px 5px 2px 5px;
+    text-decoration: underline;
+}
+
+.decouvrez h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 15px 0 15px;
+}
+
+
+.image_background {
+    background-image: url("../../img/BG.png");
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 590px;
+    position: relative;
+}
+
+.presentation {
+    position: relative;
+    top: 150px;
+}
+
+/*----------Pages liens---------*/
+.liens {
+    width: 80%;
+    border-radius: 20px;
+    margin: 20px auto 0 auto;
+    padding: 10px;
+}
+
+#lien_2 {
+    background-image: url("../../img/lien_2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+}
+
+#lien_1 {
+    background-image: url("../../img/lien_1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+}
+
+#lien_3 {
+    background-image: url("../../img/lien_3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+}
+
+#lien_4 {
+    background-image: url("../../img/lien_4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_5 {
+    background-image: url("../../img/lien_5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_6 {
+    background-image: url("../../img/lien_6.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_7 {
+    background-image: url("../../img/lien_7.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_8 {
+    background-image: url("../../img/lien_8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_9 {
+    background-image: url("../../img/lien_9.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_10 {
+    background-image: url("../../img/lien_10.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_11 {
+    background-image: url("../../img/lien_11.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_12 {
+    background-image: url("../../img/lien_12.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_13 {
+    background-image: url("../../img/lien_13.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 230px;
+    border-radius: 22px;
+    margin: 22px 0 22px 0;
+
+}
+
+#lien_1 svg, #lien_2 svg, #lien_3 svg, #lien_4 svg,#lien_5 svg,#lien_6 svg,#lien_7 svg,#lien_8 svg,#lien_9 svg,#lien_10 svg,#lien_11 svg,#lien_12 svg, #lien_13 svg  {
+    color: white;
+    padding-right: 15px;
+}
+
+#lien_1 a, #lien_2 a, #lien_3 a, #lien_4 a,#lien_5 a,#lien_6 a,#lien_7 a,#lien_8 a,#lien_9 a,#lien_10 a,#lien_11 a,#lien_12 a, #lien_13 a  {
+    color: white;
+}
+
+#lien_1 button, #lien_2 button, #lien_3 button, #lien_4 button,#lien_5 button,#lien_6 button,#lien_7 button,#lien_8 button,#lien_9 button,#lien_10 button,#lien_11 button,#lien_12 button, #lien_13 button  {
+    background-color: rgba(52, 51, 51, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 22px;
+    width: 120px;
+}
+
+.center {
+    margin: 0 auto;
+    width: 120px;
+}
+
+#lien_1 p, #lien_2 p, #lien_3 p, #lien_4 p,#lien_5 p,#lien_6 p,#lien_7 p,#lien_8 p,#lien_9 p,#lien_10 p,#lien_11 p,#lien_12 p, #lien_13 p  {
+    padding: 40px;
+    margin: 0 auto;
+    width: 200px;
+
+}

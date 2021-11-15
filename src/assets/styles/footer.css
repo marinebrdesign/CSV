@@ -6,7 +6,7 @@ footer h4 {
     text-align: center;
     color: white;
     border: 1px solid #064A74;
-
+    padding-top: 20px;
 }
 
 footer a, ul, .reseaux p {
@@ -16,6 +16,7 @@ footer a, ul, .reseaux p {
 .nav {
     float: left;
     width: 50%;
+    padding-left: 25px;
 }
 
 footer {

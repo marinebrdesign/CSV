@@ -36,3 +36,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+h3 {
+  margin-top: 0;
+  padding: 35px 0 0 15px;
+  font-weight: 400;
+}
+</style>

@@ -169,4 +169,12 @@
   padding: 20px 0 0 20px;
   margin-top: 0;
 }
+
+.association {
+  margin: 10px;
+}
+
+.contact h2{
+  margin-left: 15px;
+}
 </style>
