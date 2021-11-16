@@ -94,7 +94,9 @@
               </div>
               <div class="envoyer">
                 <button type="submit">
-                  <i class="fas fa-paper-plane fa-2x"></i>
+                  <div id="carre">
+                    <i class="fas fa-paper-plane fa-2x"></i>
+                  </div>
                 </button>
               </div>
 
