@@ -9,6 +9,7 @@ import Mentions_Legales from '../pages/mentions_legales.vue'
 import Politique_Confidentialite from '../pages/politique_confidentialite.vue'
 import Press_Book from '../pages/press_book.vue'
 import Rejoindre from '../pages/rejoindre.vue'
+import Ajouter_Press_Book from '../pages/ajouter_press_book.vue'
 
 
 Vue.use(VueRouter)
@@ -66,6 +67,12 @@ const routes = [
     path: '/rejoindre',
     name: 'rejoindre',
     component: Rejoindre,
+  },
+
+  {
+    path: '/ajouter_press_book',
+    name: 'ajouter_press_book',
+    component: Ajouter_Press_Book,
   },
 ]
 

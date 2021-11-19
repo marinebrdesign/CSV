@@ -13,14 +13,6 @@
     </div>
   <main>
       <div id="actualites">
-        <h2>Actualités</h2>
-        <div class="bulletin">
-
-        </div>
-
-        <div class="conference">
-
-        </div>
       </div>
     </main>
     <c-footer></c-footer>

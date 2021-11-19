@@ -2,9 +2,14 @@ svg {
     padding-right: 5px;
 }
 
-.contact .adresse, .contact .tel, .contact .mail {
+.contact .mail  {
     border: solid 3px #D96B2B;
     margin: 15px;
+    padding: 10px;
+}
+
+.contact .tel,.contact .adresse  {
+    border: solid 3px #D96B2B;
     padding: 10px;
 }
 
@@ -17,8 +22,8 @@ svg {
     background-color: #D96B2B;
     border: none;
     border-radius: 20px;
-    height: 80px;
-    width: 200px;
+    height: 60px;
+    width: 245px;
 }
 
 .rejoindre a {

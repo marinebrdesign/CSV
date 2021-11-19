@@ -2,40 +2,39 @@
     <div>
         <footer>
             <h4>ASSOCIATION <br>Cæuvatte-Suarcine-Vendeline</h4>
-          <!-- menu -->
-            <ul class="nav">
+              <ul class="nav">
                 <li>
-                    <router-link to="/accueil">Accueil</router-link>
+                  <router-link to="/accueil">Accueil</router-link>
                 </li>
                 <li>
-                    <router-link to="/association">Association</router-link>
+                  <router-link to="/association">Association</router-link>
                 </li>
                 <li>
-                    <router-link to="/editions">Éditions</router-link>
+                  <router-link to="/editions">Éditions</router-link>
                 </li>
                 <li>
-                    <router-link to="/communes">Nos Communes</router-link>
+                  <router-link to="/communes">Nos Communes</router-link>
                 </li>
                 <li>
-                    <router-link to="/press_book">Press Book</router-link>
+                  <router-link to="/press_book">Press Book</router-link>
                 </li>
                 <li>
-                    <router-link to="/liens">Liens</router-link>
+                  <router-link to="/liens">Liens</router-link>
                 </li>
-            </ul>
+              </ul>
 
-            <ul class="nav_2">
+              <ul class="nav_2">
                 <li>
-                    <router-link to="/mentions_legales">Mentions légales</router-link>
+                  <router-link to="/mentions_legales">Mentions légales</router-link>
                 </li>
                 <li>
-                    <router-link to="/politique_confidentialite">Politique de confidentialité</router-link>
+                  <router-link to="/politique_confidentialite">Politique de confidentialité</router-link>
                 </li>
-            </ul>
+              </ul>
 
-            <ul class="reseaux">
+              <ul class="reseaux">
                 <li><p>Suivez-nous<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-f"></i></a></p></li>
-            </ul>
+              </ul>
         </footer>
     </div>
 </template>

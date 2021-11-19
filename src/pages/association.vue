@@ -4,55 +4,66 @@
 
 <main>
 
-    <div class="association">
+    <div class="row">
+      <div class="association">
         <h2>L'ASSOCIATION CŒUVATTE-SUARCINE-VENDELINE (ASSOCIATION CSV)</h2>
         <p>Est une association créée en 2005 pour la découverte, l’information, la restauration et la sauvegarde du Patrimoine des villages irrigués par trois rivières : la Cœuvatte, la Suarcine et la Vendeline.
-            <br>
+          <br>
           <br>Elle a ensuite étendu son action sur un secteur géographique couvrant le sud du Territoire de Belfort. Son siège social est maintenant situé à Delle. L’association compte un peu plus d’une centaine de membres et est en lien avec d’autres associations du Territoire de Belfort, du Doubs, du Haut-Rhin et de Suisse. Elle est présidée par Michel Colney.
-            <br>
+          <br>
 
           <br>Chaque année l’association édite un bulletin avec des articles concernant l’histoire locale écrits pour la plupart par ses membres, elle publie des livres, organise des conférences et des sorties à la découverte du patrimoine de notre région, des régions voisines et de Suisse.
-            <br>
+          <br>
 
           <br>Le montant de l’adhésion annuelle est fixé à 23 €, chaque adhérent à jour de cotisation reçoit le bulletin de l’année en cours.</p>
-    </div>
+      </div>
 
-    <div class="contact">
-      <h2>CONTACT</h2>
+      <div class="contact">
+        <h2>CONTACT</h2>
         <div class="mail">
           <div class="svg_mail">
-          <i class="far fa-envelope fa-3x"></i>
-        </div>
-            <h4>E-MAIL</h4>
-            <p>Secrétaire : <a href="mailto:akleiber@csv-patrimoine.org">akleiber@csv-patrimoine.org</a></p>
-            <p>Trésorier : <a href="mailto:hubert.gauchey@free.fr">hubert.gauchey@free.fr</a></p>
-            <p>Édition C-S-V : <a href="mailto:edition@csv-patrimoine.org">edition@csv-patrimoine.org</a></p>
+            <i class="far fa-envelope fa-3x"></i>
+          </div>
+          <h4>E-MAIL</h4>
+          <p>Secrétaire : <a href="mailto:akleiber@csv-patrimoine.org">akleiber@csv-patrimoine.org</a></p>
+          <p>Trésorier : <a href="mailto:hubert.gauchey@free.fr">hubert.gauchey@free.fr</a></p>
+          <p>Édition C-S-V : <a href="mailto:edition@csv-patrimoine.org">edition@csv-patrimoine.org</a></p>
         </div>
 
-        <div class="adresse">
-          <div class="svg_adresse">
-            <i class="fas fa-map-marker-alt fa-3x"></i>
-          </div>
+        <div class="row">
+          <div class="adresse">
+            <div class="svg_adresse">
+              <i class="fas fa-map-marker-alt fa-3x"></i>
+            </div>
             <h4>ADRESSE</h4>
             <a href="https://www.google.fr/maps/place/10+Rue+Andr%C3%A9+Boulloche,+90100+Delle/@47.4994721,6.9882895,17z/data=!3m1!4b1!4m5!3m4!1s0x47921ef7b6b0beb3:0x318eefc22fc7d228!8m2!3d47.4994721!4d6.9904782">10 rue André Boulloche
               <br>90100, DELLE</a>
-        </div>
-
-        <div class="tel">
-          <div class="svg_tel">
-            <i class="fas fa-phone-alt fa-3x"></i>
           </div>
+
+          <div class="tel">
+            <div class="svg_tel">
+              <i class="fas fa-phone-alt fa-3x"></i>
+            </div>
             <h4>CONTACT</h4>
             <a href="tel:+33384296460">+33 3 84 29 64 60</a>
+          </div>
         </div>
+
+      </div>
     </div>
 
     <div class="rejoindre">
+      <div class="img_rejoindre">
+        <img id="rejoindre" src="../img/rejoindre.png" alt="rejoignez-nous">
+      </div>
+      <div class="texte_rejoindre">
         <h1>FAITES PASSER LE MOT</h1>
         <p>Parlez à vos amis et à votre famille de cette association. En devenant vous-même un adhérant, vous préserverez le patrimoine du sud territoire et l'impact sera plus fort.</p>
-      <div class="button">
-        <button><router-link to="/rejoindre">Rejoindre l'association</router-link></button>
+        <div class="button">
+          <button><router-link to="/rejoindre">Rejoindre l'association</router-link></button>
+        </div>
       </div>
+
     </div>
 
     <div class="form_contact">

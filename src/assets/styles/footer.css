@@ -43,3 +43,31 @@ ul.nav_2 {
 .reseaux svg {
     padding-left: 10px;
 }
+
+
+/*---------Responsive------*/
+
+@media screen and (max-width: 3000px) {
+    footer .nav_2 li:nth-child(2){
+        margin: 10px 0 25px 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    footer .nav_2 {
+        position: relative;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+}
