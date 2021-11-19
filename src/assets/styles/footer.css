@@ -6,17 +6,11 @@ footer h4 {
     text-align: center;
     color: white;
     border: 1px solid #064A74;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
-footer a, ul, .reseaux p {
+footer a, footer ul, footer p{
     color: white;
-}
-
-.nav {
-    float: left;
-    width: 50%;
-    padding-left: 25px;
 }
 
 footer {
@@ -24,24 +18,29 @@ footer {
     padding-bottom: 50px;
 }
 
-.nav li, ul.reseaux li, .nav_2 li {
+footer .nav li, footer .nav_2 li {
   margin: 5px;
 }
 
-ul.nav_2 {
-    margin-top: 30px;
+ul.nav {
+    margin-bottom: 0;
+    width: 50%;
 }
 
-.nav {
-    margin-bottom: 0;
+.nav_2 {
+    width: 50%;
 }
 
 .article {
     border: 1px solid #064A74;
 }
 
-.reseaux svg {
+.nav_2 svg {
     padding-left: 10px;
+}
+
+.nav_2 li:nth-child(2) {
+    padding-left: 5px;
 }
 
 
@@ -51,23 +50,74 @@ ul.nav_2 {
     footer .nav_2 li:nth-child(2){
         margin: 10px 0 25px 0;
     }
+
+    .footer_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer p, a {
+        font-size: 20px;
+    }
+
+    ul.nav_2 {
+        margin-top: 30px;
+        margin-right: 100px;
+        text-align: end;
+    }
+
+    ul.nav {
+        margin-left: 60px;
+    }
+
+
 }
 
 @media screen and (max-width: 1200px) {
+    ul.nav_2 {
+        margin-right: 70px;
+    }
 
+    ul.nav {
+        margin-left: 30px;
+    }
 }
 
 @media screen and (max-width: 992px) {
+    footer p, a {
+      font-size: 18px;
+    }
+
+    ul.nav_2 {
+        margin-right: 50px;
+    }
+
+    ul.nav {
+        margin-left: 10px;
+    }
 
 }
 
 @media screen and (max-width: 768px) {
-    footer .nav_2 {
-        position: relative;
-        right: 20px;
+
+    ul.nav {
+        padding-left: 50px;
+    }
+
+    footer p, a {
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 480px) {
 
+    ul.nav_2 {
+        margin-right: 35px;
+    }
+
+
+    ul.nav {
+        padding-left: 25px;
+    }
 }

@@ -120,7 +120,7 @@
 
           <br>Comment la plateforme Sendinblue sécurise vos données personnelles ? <br>
           <br>La plateforme Sendinblue a mis en application toutes les infrastructures nécessaires à la bonne sauvegarde et protection de vos données personnelles. La plateforme est transparente qu’en aux mesures mises en application :
-            <a href="https://help.sendinblue.com/hc/fr/categories/360000229110-RGPD">https://help.sendinblue.com/hc/fr/categories/360000229110-RGPD</a>
+            <a href="https://help.sendinblue.com/hc/fr/categories/360000229110-RGPD">Sendinblue</a>
     <br>
           <br>Les serveurs d’hébergement sont exclusivement situés au sein de l’Union Européenne, sur leurs propres serveurs, sur Google Cloud ou sur AWS. L’ensemble des données sont répliquées trois fois dans au moins deux géographies différentes. SendinBlue effectue également régulièrement des sauvegardes de vos données (1 fois par semaine minimum). Celles-ci sont chiffrées avant d’être stockées sur un Cloud Storage (AWS ou Google Cloud). Par ailleurs, la Plateforme a mis en place une traçabilité de ces données tout au long des traitements réalisés grâce à un système de suivi et d’identifications des logs. L’archivage est réalisé uniquement pour des raisons légales, les bases étant ensuite purgées à l’issue du délai de conservation.
     <br>
@@ -157,6 +157,6 @@ h2 {
   text-align: center;
 }
 main {
-  margin: 35px 10px 0 10px;
+  margin: 35px 20px 35px 20px;
 }
 </style>

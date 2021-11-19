@@ -32,7 +32,6 @@ li {
 }
 
 h4 {
-    font-size: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -79,6 +78,10 @@ h1 {
         font-family: Lato;
         font-size: 20px;
     }
+
+    h4 {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -88,6 +91,10 @@ h1 {
         font-weight: 400;
         text-decoration: none;
         color: black;
+    }
+
+    h4 {
+        font-size: 20px;
     }
 
     input, textarea {
@@ -103,6 +110,10 @@ h1 {
         font-weight: 400;
         text-decoration: none;
         color: black;
+    }
+
+    h4 {
+        font-size: 18px;
     }
 
     input, textarea {

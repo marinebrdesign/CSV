@@ -68,6 +68,6 @@ export default {
     text-align: center;
   }
   main {
-    margin: 35px 10px 0 10px;
+    margin: 35px 20px 35px 20px;
   }
 </style>

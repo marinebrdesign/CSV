@@ -487,7 +487,7 @@ html, body {
         background-color:#4E94BF;
         padding:20px 20px 5px 20px;
         width: 100%;
-        height: 830px;
+        height: 560px;
         max-width: 768px;
         margin:40px auto 60px auto;
     }
@@ -495,7 +495,7 @@ html, body {
 
     .article {
         background-color: #064A74;
-        padding: 100px;
+        padding: 50px 100px;
     }
 
 
@@ -548,7 +548,7 @@ html, body {
     .rejoindre {
         height: 500px;
         display: grid;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .rejoindre h1, .form_contact h1, .rejoindre p {
@@ -565,7 +565,7 @@ html, body {
     }
 
     .form_contact {
-        height: 815px;
+        height: 555px;
     }
 
 
@@ -588,7 +588,7 @@ html, body {
     .rejoindre {
         height: 400px;
         display: grid;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     #rejoindre {
@@ -608,7 +608,7 @@ html, body {
     }
 
     .form_contact {
-        height: 797px;
+        height: 550px;
     }
 
     .texte_rejoindre {
@@ -675,7 +675,7 @@ html, body {
         background-color:#4E94BF;
         padding:20px 20px 5px 20px;
         width: 100%;
-        height: 800px;
+        height: 550px;
         max-width: 768px;
         margin:0 auto 60px auto;
     }

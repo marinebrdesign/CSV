@@ -79,25 +79,9 @@
                     <label for="prenom"></label>
                     <input type="text" placeholder="Prénom" id="prenom" name="user_firstname" required>
                 </div>
-                <div class="adresse">
-                    <label for="adresse"></label>
-                    <input type="text" placeholder="Adresse" id="adresse" name="user_adress" required>
-                </div>
-                <div class="code_postal">
-                    <label for="code_postal"></label>
-                    <input type="number" placeholder="Code Postal" id="code_postal" name="user_code" required>
-                </div>
-                <div class="ville">
-                    <label for="ville"></label>
-                    <input type="text" placeholder="Ville" id="ville" name="user_city" required>
-                </div>
                 <div class="mail">
                     <label for="mail"></label>
                     <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
-                </div>
-                <div class="tel">
-                    <label for="tel"></label>
-                    <input type="number" placeholder="Téléphone" id="tel" name="user_phone" required>
                 </div>
               <div class="msg">
                 <label for="msg"></label>
