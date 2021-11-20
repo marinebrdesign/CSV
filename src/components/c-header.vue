@@ -1,53 +1,30 @@
 <template>
         <div>
 <header>
-
-  <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
-    <div class="nav-toggle-bar"></div>
-  </div>
-  <h3>CSV / <span>CŒUVATTE-SUARCINE-VENDELINE</span></h3>
-  <nav class="menu">
-    <h3>CSV / <span>CŒUVATTE-SUARCINE-VENDELINE</span></h3>
-    <ul>
-      <li><router-link to="/accueil" onclick="document.documentElement.classList.toggle('menu-open')">ACCUEIL</router-link></li>
-        <li><router-link to="/association" onclick="document.documentElement.classList.toggle('menu-open')">ASSOCIATION</router-link></li>
-        <li><router-link to="/editions" onclick="document.documentElement.classList.toggle('menu-open')">ÉDITIONS</router-link></li>
-        <li><router-link to="/communes" onclick="document.documentElement.classList.toggle('menu-open')">NOS COMMUNES</router-link></li>
-        <li><router-link to="/press_book" onclick="document.documentElement.classList.toggle('menu-open')">PRESS BOOK</router-link></li>
-        <li><router-link to="/liens" onclick="document.documentElement.classList.toggle('menu-open')">LIENS</router-link></li>
-    </ul>
-  </nav>
-  <!--<nav class="navbar" role="navigation">
-    <div class="navbar__logo">CSV / <span>CŒUVATTE-SUARCINE-VENDELINE</span></div>
+  <nav class="navbar" role="navigation" :class="showNav?'show-nav':''">
+    <div class="navbar__logo"><div class="csv">CSV /</div> <span>CŒUVATTE-SUARCINE-VENDELINE</span></div>
     <ul class="navbar__links">
-      <li class="navbar__link"><router-link to="/accueil">ACCUEIL</router-link></li>
+      <!--<li class="navbar__logo"><div class="csv_2">CSV / <span>CŒUVATTE-SUARCINE-VENDELINE</span></div><li>-->
+      <li class="navbar__link"><router-link to="/">ACCUEIL</router-link></li>
       <li class="navbar__link"><router-link to="/association">ASSOCIATION</router-link></li>
       <li class="navbar__link"><router-link to="/editions">ÉDITIONS</router-link></li>
       <li class="navbar__link"><router-link to="/communes">COMMUNES</router-link></li>
       <li class="navbar__link"><router-link to="/press_book">PRESS BOOK</router-link></li>
       <li class="navbar__link"><router-link to="/liens">LIENS</router-link></li>
     </ul>
-    <button class="burger">
+    <button class="burger" @click="toggleMenu">
       <span class="bar"></span>
     </button>
-  </nav>-->
+  </nav>
 </header>
 
 </div>
 </template>
 <script>
-/*function toggleMenu () {
-  const navbar = document.querySelector('.navbar');
-  const burger = document.querySelector('.burger');
-  burger.addEventListener('click', () => {
-    navbar.classList.toggle('show-nav');
-  })
-}
-toggleMenu();*/
-
 export default {
   data(){
     return {
+      showNav: false,
     }
   },
   mounted(){
@@ -56,6 +33,9 @@ export default {
     });*/
   },
   methods:{
+    toggleMenu() {
+      this.showNav = !this.showNav
+    }
   },
 }
 </script>
@@ -66,158 +46,215 @@ h3 {
   font-weight: 400;
 }
 
-/*variables*/
+.navbar__logo {
+  font-family: "Bebas Neue";
+  font-size: 18px;
+  padding-left: 20px;
+  z-index: 4;
+}
 
+.csv, span, .csv_2 {
+  display: inline-block;
+}
 
+/* Variables */
 
-/*reset*/
+/* Reset */
 * {
-  box-sizing: border-box;
-  outline: none;
+  box-sizing:border-box;
+  outline:none;
   margin:0;
-  padding: 0;
+  padding:0;
 }
-
 ul {
-  list-style: none;
+  list-style:none;
 }
-/*basic style*/
-
-/*navbar*/
+/* Navbar */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 65px;
-  padding: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px;
   background: black;
-  color: #FFFFFF;
+  color: white;
 }
-
 .navbar__links {
-  display: flex;
+  display:flex;
 }
 
-.navbar__link {
-  padding:0 10px;
-}
 
 .navbar__link > a {
-  color: white;
-  text-decoration: none;
+  color:white;
+  text-decoration:none;
+  font-family: "Bebas Neue";
+  font-size: 18px;
 }
 
+.navbar__link > a:hover {
+  color:#D96B2B;
+}
 .burger {
-  display: none;
+  display:none;
 }
 
+/*  Small device */
+@media screen and (max-width:767.98px) {
+  .csv, .csv_2 {
+    color: black;
+  }
 
-/*small devices*/
-@media screen and (max-width: 7067.98px) {
+  .navbar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:40px 10px 10px 10px;
+    background: transparent;
+    color: white;
+  }
+
   .navbar__links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 65px);
-    position: absolute;
-    top: 65px;
-    right: 0;
-    background: #000000;
-    transition:all .5s ease-in-out ;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    /*height:calc(110vh - 65px);*/
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    background:white;
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
   }
-
   .show-nav .navbar__links {
-    width: 100%;
+
+    width:100vw;
+    transform: translateX(0);
+  }
+  .navbar__link {
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
   }
 
+  .show-nav .navbar__link  {
+    transform: translateX(0);
+  }
   .navbar__link > a {
-    display: block;
-    padding: 1rem;
-    transition:all .4s ease-in-out;
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    color:black;
+    transition: all .4s ease-in-out;
   }
 
   .navbar__link > a:hover {
-    display: block;
-    padding-left: 2rem;
-    letter-spacing: 5px;
+    padding-left:2rem;
+    letter-spacing:5px;
   }
-  /*toggle menu*/
+
+  /* Toggle menu */
   .burger {
-    display: block;
-    position: relative;
-    padding: 0;
-    width: 45px;
-    height: 45px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
+    display:block;
+    position:relative;
+    padding:0;
+    width:30px;
+    height:30px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    z-index: 4;
   }
   .bar {
-    display: block;
-    width: 45px;
-    height: 4px;
-    background: #D96B2B;
-    border-radius: 3px;
-    transition:all .5s ease-in-out ;
+    display:block;
+    width:15px;
+    height:2.5px;
+    border-radius:3px;
+    background:#D96B2B;
+    transition: all .5s ease-in-out;
   }
-
-  .show-nav .bar {
-    width: 0;
-    background: transparent;
+  .bar::before, .bar::after {
+    content:"";
+    width:25px;
+    height:2.5px;
+    position:absolute;
+    left:0;
+    background:#D96B2B;
+    border-radius:3px;
+    transition: all .5s ease-in-out;
   }
-
-  .bar::before, .bar::after{
-    content: "";
-    width: 45px;
-    height: 4px;
-    position: absolute;
-    left: 0;
-    background: #D96B2B;
-    border-radius: 3px;
-    transition:all .5s ease-in-out ;
-  }
-
   .bar::before {
-    transform: translateY(-12px);
+    transform:translateY(-12px);
   }
-
-  .show-nav .bar::before {
-    transform: rotate(45deg);
-  }
-
   .bar::after {
-    transform: translateY(12px);
+    transform:translateY(12px);
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
   }
 
-  .show-nav .bar::after {
-    transform: rotate(-45deg);
+  /* Animations */
+  .show-nav .first {
+    transition: all 1s ease-out;
+  }
+  .show-nav .second {
+    transition: all 1.1s ease-out;
+  }
+  .show-nav .third {
+    transition: all 1.2s ease-out;
+  }
+  .show-nav .four {
+    transition: all 1.3s ease-out;
+  }
+  .show-nav .fifth {
+    transition: all 1.4s ease-out;
   }
 }
 
-
-
-/*animations*/
-
-/*medium devices*/
-
-@media screen and (min-width: 7068px){
+/*  Medium device*/
+@media screen and (min-width:768px) {
   .navbar__link > a::after {
-    display: block;
-    content: "";
-    width: 0;
-    height: 1px;
-    background: #D96B2B;
+    display:block;
+    content:"";
+    width:0;
+    height:1px;
+    background:#D96B2B;
     transition:width .4s;
   }
-
-  .navbar__link:hover >a:hover {
-    color: #D96B2B;
+  .navbar__link:hover > a::after {
+    width:100%;
   }
 
-  .navbar__link:hover >a::after {
-    width: 100%;
-    color: #D96B2B;
+  .navbar__link {
+    padding:0 10px;
   }
-  
+
+  .csv , .csv_2{
+    color: white;
+  }
+
+  .navbar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px;
+    font-size:1.1rem;
+    background: black;
+    color: white;
+  }
+
+  .csv_2 {
+    display: none;
+  }
 }
 </style>

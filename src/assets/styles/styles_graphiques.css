@@ -42,3 +42,26 @@ svg {
     -webkit-transform: rotate(45deg);
     -o-transform: rotate(45deg);
 }
+
+/*---------Responsive------*/
+
+@media screen and (max-width: 3000px) {
+    .svg_decouvrez g {
+        fill: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+    .svg_decouvrez g {
+        fill: black;
+    }
+}
+@media screen and (max-width: 480px) {
+
+}
