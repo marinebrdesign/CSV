@@ -161,7 +161,7 @@ ul {
     display:block;
     position:relative;
     padding:0;
-    width:30px;
+    width:55px;
     height:30px;
     border:none;
     background:transparent;

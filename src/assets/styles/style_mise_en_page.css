@@ -177,7 +177,6 @@ html, body {
 
 .decouvrez{
     background-color: white;
-    width: 80%;
     border-radius: 20px;
     margin: 0 auto 20px auto;
     padding: 30px 10px 20px 10px;
@@ -394,9 +393,9 @@ html, body {
 /*----------Pages Communes---------*/
 #chavanatte, #courcelles, #courtelevant, #delle, #faverois, #florimont, #grandvillars, #jonchery, #lepuix_neuf, #rechesy, #suarce {
     background-color: white;
-    width: 80%;
+    width: 350px;
     border-radius: 20px;
-    margin: 0 auto 20px auto;
+    margin: 30px 20px;
     padding: 20px 10px 20px 10px;
 }
 
@@ -412,11 +411,13 @@ html, body {
     background-color: #FFFFFF;
     padding: 10px 20px 10px 20px;
     border-radius: 14px;
-    margin: 0 auto;
-    width: 75px;
+    width: 90px;
     position: relative;
     top: -25px;
     font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #chavanatte p, #courcelles p, #courtelevant p, #delle p, #faverois p, #florimont p, #grandvillars p, #jonchery p, #lepuix_neuf p, #rechesy p, #suarce p {
@@ -438,6 +439,14 @@ html, body {
 .lire {
     margin: 0 auto 10px auto;
     width: 140px;
+}
+#container_communes, #container_decouvrez{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 /*---------Responsive------*/
@@ -556,8 +565,7 @@ html, body {
     }
 
     .decouvrez{
-        background-color:black;
-        width: 80%;
+        background-color:transparent;
         border-radius: 20px;
         margin: 0 auto 20px auto;
         padding: 30px 10px 20px 10px;
@@ -583,6 +591,14 @@ html, body {
     .presentation h1 {
         font-size: 26px;
     }
+
+    #chavanatte p, #courcelles p, #courtelevant p, #delle p, #faverois p, #florimont p, #grandvillars p, #jonchery p, #lepuix_neuf p, #rechesy p, #suarce p {
+        margin: 15px;
+    }
+
+    #chavanatte, #courcelles, #courtelevant, #delle, #faverois, #florimont, #grandvillars, #jonchery, #lepuix_neuf, #rechesy, #suarce {
+        height: 400px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -596,7 +612,6 @@ html, body {
     .form_contact {
         height: 555px;
     }
-
 
     .texte_rejoindre {
         background-color: #EDFCEB;
@@ -675,6 +690,10 @@ html, body {
     .presentation h1 {
         font-size: 22px;
     }
+
+    #chavanatte, #courcelles, #courtelevant, #delle, #faverois, #florimont, #grandvillars, #jonchery, #lepuix_neuf, #rechesy, #suarce {
+        height: 380px;
+    }
 }
 @media screen and (max-width: 768px) {
     .association {
@@ -682,6 +701,7 @@ html, body {
         border-right: none;
         padding: 0;
     }
+
     .contact {
         flex-direction: column;
         width: 100%;
@@ -704,23 +724,23 @@ html, body {
     }
 
     .form_contact {
-        margin:0 auto;
+        margin: 0 auto;
     }
 
     .form_contact {
-        box-sizing : border-box;
-        background-color:#4E94BF;
-        padding:20px 20px 5px 20px;
+        box-sizing: border-box;
+        background-color: #4E94BF;
+        padding: 20px 20px 5px 20px;
         width: 100%;
         height: 550px;
         max-width: 768px;
-        margin:0 auto 60px auto;
+        margin: 0 auto 60px auto;
     }
 
     .tel a {
-        display:block;
-        width:130px;
-        margin:0 auto;
+        display: block;
+        width: 130px;
+        margin: 0 auto;
     }
 
     .rejoindre h1, .form_contact h1, .rejoindre p {
@@ -759,12 +779,17 @@ html, body {
         margin: auto 0;
     }
 
-    .decouvrez{
+    .decouvrez {
         background-color: white;
-        width: 80%;
         border-radius: 20px;
         margin: 0 auto 20px auto;
         padding: 30px 10px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 350px;
     }
 
     .decouvrez a {
@@ -784,11 +809,14 @@ html, body {
     .presentation h1 {
         font-size: 20px;
     }
-}
-@media screen and (max-width: 480px) {
 
-    .image_background {
-        background-image: url("../../img/BG.png");
+    @media screen and (max-width: 480px) {
+
+        .image_background {
+            background-image: url("../../img/BG.png");
+        }
+
     }
 
 }
+
