@@ -197,180 +197,127 @@ html, body {
 
 .presentation {
     position: relative;
-    top: 300px;
+    top: 200px;
+}
+
+.logo {
+    width: 187px;
+    margin: 0 auto 40px auto;
+}
+
+#csv {
+    text-align: center;
 }
 
 /*----------Pages liens---------*/
 .liens {
-    width: 80%;
-    border-radius: 20px;
-    margin: 20px auto 0 auto;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.liens_container {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 330px;
+    height: 230px;
+    border-radius: 22px;
+    margin: 20px 10px;
 }
 
 #lien_2 {
     background-image: url("../../img/lien_2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_1 {
     background-image: url("../../img/lien_1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_3 {
     background-image: url("../../img/lien_3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_4 {
     background-image: url("../../img/lien_4.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_5 {
     background-image: url("../../img/lien_5.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_6 {
     background-image: url("../../img/lien_6.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_7 {
     background-image: url("../../img/lien_7.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_8 {
     background-image: url("../../img/lien_8.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_9 {
     background-image: url("../../img/lien_9.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_10 {
     background-image: url("../../img/lien_10.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_11 {
     background-image: url("../../img/lien_11.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_12 {
     background-image: url("../../img/lien_12.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
 #lien_13 {
     background-image: url("../../img/lien_13.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 230px;
-    border-radius: 22px;
-    margin: 22px 0 22px 0;
-
+    background-size: cover;
+    height: 100%;
 }
 
-#lien_1 svg, #lien_2 svg, #lien_3 svg, #lien_4 svg,#lien_5 svg,#lien_6 svg,#lien_7 svg,#lien_8 svg,#lien_9 svg,#lien_10 svg,#lien_11 svg,#lien_12 svg, #lien_13 svg  {
+.liens_container svg {
     color: white;
     padding-right: 15px;
 }
 
-#lien_1 a, #lien_2 a, #lien_3 a, #lien_4 a,#lien_5 a,#lien_6 a,#lien_7 a,#lien_8 a,#lien_9 a,#lien_10 a,#lien_11 a,#lien_12 a, #lien_13 a  {
+.liens_container a {
     color: white;
 }
 
-#lien_1 button, #lien_2 button, #lien_3 button, #lien_4 button,#lien_5 button,#lien_6 button,#lien_7 button,#lien_8 button,#lien_9 button,#lien_10 button,#lien_11 button,#lien_12 button, #lien_13 button  {
+.liens_container button {
     background-color: rgba(52, 51, 51, 0.5);
     border: none;
     padding: 10px;
@@ -383,15 +330,19 @@ html, body {
     width: 120px;
 }
 
-#lien_1 p, #lien_2 p, #lien_3 p, #lien_4 p,#lien_5 p,#lien_6 p,#lien_7 p,#lien_8 p,#lien_9 p,#lien_10 p,#lien_11 p,#lien_12 p, #lien_13 p  {
+.liens_container p {
     padding: 40px;
     margin: 0 auto;
     width: 200px;
 
 }
 
+#lien_7 {
+    padding-bottom: 15px;
+}
+
 /*----------Pages Communes---------*/
-#chavanatte, #courcelles, #courtelevant, #delle, #faverois, #florimont, #grandvillars, #jonchery, #lepuix_neuf, #rechesy, #suarce {
+.communes {
     background-color: white;
     width: 350px;
     border-radius: 20px;
@@ -406,7 +357,7 @@ html, body {
     padding-top: 10px;
 }
 
-#chavanatte h3, #courcelles h3, #courtelevant h3, #delle h3, #faverois h3, #florimont h3, #grandvillars h3, #jonchery h3, #lepuix_neuf h3, #rechesy h3, #suarce h3 {
+.communes h3 {
     color: #D96B2B;
     background-color: #FFFFFF;
     padding: 10px 20px 10px 20px;
@@ -420,7 +371,7 @@ html, body {
     text-align: center;
 }
 
-#chavanatte p, #courcelles p, #courtelevant p, #delle p, #faverois p, #florimont p, #grandvillars p, #jonchery p, #lepuix_neuf p, #rechesy p, #suarce p {
+.communes p {
     text-align: center;
     padding: 20px;
 }
@@ -532,13 +483,13 @@ html, body {
     }
 
     .texte_rejoindre {
-        background-color: #EDFCEB;
+        background-color: #d6e7d4;
         padding-top: 10px;
         padding-bottom: 75px;
         width: 60%;
         float: left;
         margin: auto 0 auto 100px;
-        height: 240px;
+        height: 200px;
     }
 
 
@@ -592,11 +543,11 @@ html, body {
         font-size: 26px;
     }
 
-    #chavanatte p, #courcelles p, #courtelevant p, #delle p, #faverois p, #florimont p, #grandvillars p, #jonchery p, #lepuix_neuf p, #rechesy p, #suarce p {
+.communes p {
         margin: 15px;
     }
 
-    #chavanatte, #courcelles, #courtelevant, #delle, #faverois, #florimont, #grandvillars, #jonchery, #lepuix_neuf, #rechesy, #suarce {
+    .communes {
         height: 400px;
     }
 }
@@ -614,13 +565,13 @@ html, body {
     }
 
     .texte_rejoindre {
-        background-color: #EDFCEB;
+        background-color: #d6e7d4;
         padding-top: 10px;
         padding-bottom: 75px;
         width: 60%;
         float: left;
         margin: auto 0 auto 100px;
-        height: 230px;
+        height: 200px;
     }
 
     .img_rejoindre {
@@ -661,13 +612,13 @@ html, body {
     }
 
     .texte_rejoindre {
-        background-color: #EDFCEB;
+        background-color: #d6e7d4;
         padding-top: 10px;
         padding-bottom: 60px;
         width: 60%;
         float: left;
         margin: auto 0 auto 50px;
-        height: 190px;
+        height: 210px;
     }
 
 
@@ -691,7 +642,7 @@ html, body {
         font-size: 22px;
     }
 
-    #chavanatte, #courcelles, #courtelevant, #delle, #faverois, #florimont, #grandvillars, #jonchery, #lepuix_neuf, #rechesy, #suarce {
+    .communes {
         height: 380px;
     }
 }
@@ -748,7 +699,7 @@ html, body {
     }
 
     .rejoindre {
-        background-color: #EDFCEB;
+        background-color: #d6e7d4;
         padding-top: 10px;
         padding-bottom: 40px;
         margin-bottom: 0;
@@ -771,7 +722,7 @@ html, body {
     }
 
     .texte_rejoindre {
-        background-color: #EDFCEB;
+        background-color: #d6e7d4;
         padding-top: 10px;
         padding-bottom: 40px;
         width: 100%;
@@ -809,6 +760,16 @@ html, body {
     .presentation h1 {
         font-size: 20px;
     }
+
+    .logo img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
 
     @media screen and (max-width: 480px) {
 

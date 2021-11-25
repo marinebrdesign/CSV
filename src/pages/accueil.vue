@@ -3,6 +3,9 @@
     <div class="image_background">
       <c-header></c-header>
       <div class="presentation">
+        <div class="logo">
+          <img src="../img/Logo.png" alt="logo_csv">
+        </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Bienvenue sur le site de l’association Cœuvatte-Suarcine-Vendeline (CSV) :
           <br>Histoire et patrimoine du sud-territoire de Belfort</p>

@@ -31,6 +31,7 @@
                 <router-link to="/politique_confidentialite">Politique de confidentialité</router-link>
               </li>
               <li><p>Suivez-nous<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-f"></i></a></p></li>
+              <li><img src="../img/Logo.png" width="50" height="50" alt="logo_csv"></li>
             </ul>
           </div>
         </footer>
@@ -52,6 +53,9 @@ export default {
 }
 </script>
 <style scoped>
+@media  {
+  
+}
   h4 {
     margin-top: 0;
     font-family: Lato;

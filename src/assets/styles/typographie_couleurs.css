@@ -51,7 +51,7 @@ h1 {
     font-size: 15px;
 }
 
-#lien_2 p, #lien_1 p, #lien_3 p, #lien_4 p, #lien_5 p, #lien_6 p , #lien_7 p, #lien_8 p, #lien_9 p, #lien_10 p, #lien_11 p, #lien_12 p, #lien_13 p {
+.liens_container p {
     color: white;
     font-weight: bold;
 }
@@ -67,7 +67,7 @@ h1 {
 
 @media screen and (max-width: 3000px) {
     p, a {
-        font-size: 20px;
+        font-size: 18px;
         font-family: lato;
         font-weight: 400;
         text-decoration: none;
@@ -85,13 +85,6 @@ h1 {
 }
 
 @media screen and (max-width: 1200px) {
-    p, a {
-        font-size: 18px;
-        font-family: lato;
-        font-weight: 400;
-        text-decoration: none;
-        color: black;
-    }
 
     h4 {
         font-size: 20px;

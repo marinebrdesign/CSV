@@ -157,6 +157,7 @@ h2 {
   text-align: center;
 }
 main {
-  margin: 35px 20px 35px 20px;
+  width: 90%;
+  margin: 35px auto;
 }
 </style>

@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="image_background">
-      <c-header></c-header>
+        <c-header></c-header>
       <div class="presentation">
+        <div class="logo">
+          <img src="../img/Logo.png" alt="logo_csv">
+        </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
-        <p>Bienvenue sur le site de l’association Cœuvatte-Suarcine-Vendeline (CSV) :
-          <br>Histoire et patrimoine du sud-territoire de Belfort</p>
+        <p>Les liens externes </p>
         <div class="fleche">
           <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
         </div>
@@ -13,6 +15,7 @@
       </div>
     <main>
       <div class="degrade">
+        <div id="container_decouvrez">
         <div class="decouvrez">
           <div class="svg_decouvrez">
             <svg data-name="Groupe 313" viewBox="0 0 89.235 89.316" xmlns="http://www.w3.org/2000/svg">
@@ -100,102 +103,129 @@
           <a href="#lien_12">- Musées de la ville de Belfort</a>
           <a href="#lien_13">- Commune de Florimont</a>
         </div>
-
+        </div>
+        <h1 id="lien">LIENS EXTERNES</h1>
         <div class="liens">
 
+          <div class="liens_container">
           <div id="lien_1">
             <p>Archives départementales du territoire de Belfort</p>
             <div class="center">
               <button><a href="https://archives.territoiredebelfort.fr/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_2">
             <p>Archives municipales de Belfort</p>
             <div class="center">
               <button><a href="https://archives.belfort.fr"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+        </div>
 
+          <div class="liens_container">
           <div id="lien_3">
             <p>Bibliothèque Nationale de France</p>
             <div class="center">
               <button><a href="https://www.bnf.fr/fr"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_4">
             <p>Mémoire des hommes</p>
             <div class="center">
               <button><a href="https://www.memoiredeshommes.sga.defense.gouv.fr/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_5">
             <p>Association Histoire et Patrimoine Sous-Vosgien</p>
             <div class="center">
               <button><a href="https://sites.google.com/site/ahpsvtdp/home"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+        </div>
 
+          <div class="liens_container">
           <div id="lien_6">
             <p>Les Amis du Moulin de Courtelevant</p>
             <div class="center">
               <button><a href="https://www.amc.moulincourtelevant.fr/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_7">
             <p>Société d’Histoire et d’Archéologie de l’Arrondissement de Lure</p>
             <div class="center">
               <button><a href="https://www.shaarl.com/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_8">
             <p>Société Jurassienne d’Emulation (CH)</p>
             <div class="center">
               <button><a href="https://www.sje.ch/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_9">
             <p>Union des patoisants en langue romane</p>
             <div class="center">
               <button><a href="https://www.patoisbelfort.fr/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_10">
             <p>Association Folklore comtois</p>
             <div class="center">
               <button><a href="https://www.folklore-comtois.fr/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+            </div>
 
+          <div class="liens_container">
           <div id="lien_11">
             <p>Centre d’Entraide Généalogique de Franche-Comté</p>
             <div class="center">
               <button><a href="https://www.cegfc.net/www/index.php3"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
-          <div id="lien_12">
+          <div class="liens_container">
+            <div id="lien_12">
             <p>Musées de la ville de Belfort</p>
             <div class="center">
               <button><a href="https://musees.belfort.fr/accueil-991.html"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
+          </div>
 
+          <div class="liens_container">
           <div id="lien_13">
             <p>Commune de Florimont</p>
             <div class="center">
               <button><a href="https://florimont.fr/"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
-
+          </div>
         </div>
       </div>
+
 
     </main>
 <c-footer></c-footer>
@@ -222,3 +252,55 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+@media screen and (max-width: 3000px) {
+
+  .decouvrez {
+    display: none;
+  }
+
+  #lien {
+    display: block;
+    margin-left: 65px;
+  }
+
+  .degrade {
+    background: linear-gradient(#ffffff, #ffffff);
+  }
+
+  .presentation p {
+    font-family: "Bebas Neue";
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .decouvrez {
+    display: block;
+  }
+
+  #lien {
+    display: none;
+  }
+
+  .degrade {
+    background: linear-gradient(#000000, #0E486D , #064A74);
+  }
+
+  .decouvrez {
+    display: block;
+  }
+
+  .presentation p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .presentation p {
+    font-size: 25px;
+  }
+}
+</style>

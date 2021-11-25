@@ -3,9 +3,11 @@
     <div class="image_background">
       <c-header></c-header>
       <div class="presentation">
+        <div class="logo">
+          <img src="../img/Logo.png" alt="logo_csv">
+        </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
-        <p>Bienvenue sur le site de l’association Cœuvatte-Suarcine-Vendeline (CSV) :
-          <br>Histoire et patrimoine du sud-territoire de Belfort</p>
+        <p>Les commnunes de l'association</p>
         <div class="fleche">
           <a href="">
             <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -128,7 +130,8 @@
         </div>
 
         <div id="container_communes">
-          <div id="chavanatte">
+
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/chavanatte.png" alt="chavanatte">
               <h3>Chavanatte</h3>
@@ -138,18 +141,18 @@
             <div class="lire">
               <button>Lire la suite</button>
             </div>
-            <!--pop-up
+            <!--
             <h3>Chavanatte</h3>
             <p>
-              Petite commune du Sud Territoire, Chavanatte est traversée par les rivières la Suarcine et la Lutter ainsi que par le ruisseau le Préra.
-              On mentionne le village pour la première fois en 1458. A l’origine, l'habitat était composé de "cabanes" d'où son nom de "Chavanatte".
-              Autrefois Chavanatte dépendait de la seigneurie de Florimont. De 1685 jusqu'à la Révolution française, le fief est la propriété du comte de Reiset.
-              En 1871, quand l'Alsace est passée à l'Allemagne, Chavanatte a fait valoir que la commune était de langue française et se trouvait dans le bassin rhodanien. Elle a été rattachée au canton de Delle jusqu'en 1970 date à laquelle elle a rejoint le canton de Grandvillars.
-              Le village est situé dans le Sundgau et l'influence de l'architecture rurale typique alsacienne est nettement visible dans cette commune avec l'utilisation de structures en bois (colombages) pour la construction des maisons.
+            Petite commune du Sud Territoire, Chavanatte est traversée par les rivières la Suarcine et la Lutter ainsi que par le ruisseau le Préra.
+            On mentionne le village pour la première fois en 1458. A l’origine, l'habitat était composé de "cabanes" d'où son nom de "Chavanatte".
+            Autrefois Chavanatte dépendait de la seigneurie de Florimont. De 1685 jusqu'à la Révolution française, le fief est la propriété du comte de Reiset.
+            En 1871, quand l'Alsace est passée à l'Allemagne, Chavanatte a fait valoir que la commune était de langue française et se trouvait dans le bassin rhodanien. Elle a été rattachée au canton de Delle jusqu'en 1970 date à laquelle elle a rejoint le canton de Grandvillars.
+            Le village est situé dans le Sundgau et l'influence de l'architecture rurale typique alsacienne est nettement visible dans cette commune avec l'utilisation de structures en bois (colombages) pour la construction des maisons.
             </p>-->
           </div>
 
-          <div id="courcelles">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/courcelles.png" alt="courcelles">
               <h3>Courcelles</h3>
@@ -167,7 +170,7 @@
             </p>-->
           </div>
 
-          <div id="courtelevant">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/courtellevant.png" alt="chavanatte">
               <h3>Courtelevant</h3>
@@ -185,7 +188,7 @@
             </p>-->
           </div>
 
-          <div id="delle">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/delle.png" alt="chavanatte">
               <h3>Delle</h3>
@@ -207,7 +210,7 @@
             </p>-->
           </div>
 
-          <div id="faverois">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/faverois.png" alt="chavanatte">
               <h3>Faverois</h3>
@@ -226,7 +229,7 @@
             </p>-->
           </div>
 
-          <div id="florimont">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/florimont.png" alt="chavanatte">
               <h3>Florimont</h3>
@@ -246,7 +249,7 @@
             </p>-->
           </div>
 
-          <div id="grandvillars">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/grandvillars.png" alt="chavanatte">
               <h3>Grandivllars</h3>
@@ -267,7 +270,7 @@
             </p>-->
           </div>
 
-          <div id="jonchery">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/jonchery.png" alt="chavanatte">
               <h3>Jonchery</h3>
@@ -290,7 +293,7 @@
               </p>-->
           </div>
 
-          <div id="lepuix_neuf">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/lepuix_neuf.png" alt="chavanatte">
               <h3>Lepuix-Neuf</h3>
@@ -312,7 +315,7 @@
               </p>-->
           </div>
 
-          <div id="rechesy">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/rechesy.png" alt="chavanatte">
               <h3>Réchesy</h3>
@@ -335,7 +338,7 @@
               </p>-->
           </div>
 
-          <div id="suarce">
+          <div class="communes">
             <div class="img_ville">
               <img width="220px" src="../img/suarce.png" alt="chavanatte">
               <h3>Suarce</h3>
@@ -373,13 +376,37 @@ export default {
     CHeader,
   },
   data() {
-    return {}
+    return {
+    };
   },
   mounted() {
     /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
         this.listeCategories = response.data;
     });*/
   },
-  methods: {}
+  methods: {
+  },
 }
+
+
 </script>
+<style scoped>
+
+@media screen and (max-width: 3000px) {
+  .presentation p {
+    font-family: "Bebas Neue";
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .presentation p {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .presentation p {
+    font-size: 25px;
+  }
+}
+</style>
