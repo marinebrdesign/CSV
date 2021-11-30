@@ -54,7 +54,7 @@
 
     <div class="rejoindre">
       <div class="img_rejoindre">
-        <img id="rejoindre" src="../img/rejoindre.png" alt="rejoignez-nous">
+        <img id="rejoindre" src="../img/association/rejoindre.png" alt="rejoignez-nous">
       </div>
       <div class="texte_rejoindre">
         <h1>FAITES PASSER LE MOT</h1>
@@ -70,22 +70,22 @@
         <div class="h1_form">
           <h1>ÉCRIVEZ-NOUS</h1>
         </div>
-            <form id="contact">
+            <form id="contact" method="post" action="#">
                 <div class="nom">
                     <label for="nom"></label>
-                    <input type="text" placeholder="Nom" id="nom" name="user_name" required>
+                    <input type="text" placeholder="Nom" id="nom" name="name" required>
                 </div>
                 <div class="prenom">
                     <label for="prenom"></label>
-                    <input type="text" placeholder="Prénom" id="prenom" name="user_firstname" required>
+                    <input type="text" placeholder="Prénom" id="prenom" name="firstname" required>
                 </div>
                 <div class="mail">
                     <label for="mail"></label>
-                    <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
+                    <input type="email" placeholder="Adresse mail" id="mail" name="mail" required>
                 </div>
               <div class="msg">
                 <label for="msg"></label>
-                <textarea id="msg" placeholder="Message" name="user_message" required></textarea>
+                <textarea id="msg" placeholder="Message" name="message" required cols="50" rows="5"></textarea>
               </div>
               <div class="envoyer">
                 <button type="submit">

@@ -9,11 +9,13 @@
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Les liens externes </p>
         <div class="fleche">
-          <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+          <a href="#ancre"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+          </a>
         </div>
       </div>
       </div>
     <main>
+      <div id="ancre"></div>
       <div class="degrade">
         <div id="container_decouvrez">
         <div class="decouvrez">
@@ -106,7 +108,6 @@
         </div>
         <h1 id="lien">LIENS EXTERNES</h1>
         <div class="liens">
-
           <div class="liens_container">
           <div id="lien_1">
             <p>Archives départementales du territoire de Belfort</p>

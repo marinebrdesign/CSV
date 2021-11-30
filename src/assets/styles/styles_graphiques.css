@@ -43,6 +43,13 @@ svg {
     -o-transform: rotate(45deg);
 }
 
+.cercle {
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    background: linear-gradient(#D96B2B, #D8AF97);
+}
+
 /*---------Responsive------*/
 
 @media screen and (max-width: 3000px) {

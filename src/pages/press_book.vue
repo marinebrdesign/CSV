@@ -3,7 +3,7 @@
 		<c-header></c-header>
 
 <main>
-
+  <div id="container_press_book">
     <div class="press_book">
         <div id="2018">
             <a href="">2018</a>
@@ -21,6 +21,7 @@
 
         </div>
     </div>
+  </div>
 
 </main>
 <c-footer></c-footer>
