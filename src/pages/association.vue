@@ -3,7 +3,6 @@
 		<c-header></c-header>
 
 <main>
-
     <div class="row">
       <div class="association">
         <h2>L'ASSOCIATION CŒUVATTE-SUARCINE-VENDELINE (ASSOCIATION CSV)</h2>
@@ -85,7 +84,7 @@
                 </div>
               <div class="msg">
                 <label for="msg"></label>
-                <textarea id="msg" placeholder="Message" name="message" required cols="50" rows="5"></textarea>
+                <textarea id="msg" placeholder="Message" name="message" required cols="30" rows="5"></textarea>
               </div>
               <div class="envoyer">
                 <button type="submit">

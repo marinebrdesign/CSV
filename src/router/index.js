@@ -9,10 +9,18 @@ import Mentions_Legales from '../pages/mentions_legales.vue'
 import Politique_Confidentialite from '../pages/politique_confidentialite.vue'
 import Press_Book from '../pages/press_book.vue'
 import Rejoindre from '../pages/rejoindre.vue'
+import test from '../pages/test.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/test',
+    name: 'test',
+    component: test,
+  },
+
   {
     path: '/',
     name: 'Accueil',

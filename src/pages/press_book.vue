@@ -3,23 +3,37 @@
 		<c-header></c-header>
 
 <main>
+  <h1 id="pb">PRESS BOOK</h1>
+  <p>Afin de consulter un press book, veuillez télécharger celui-ci à partir du bouton "Télécharger".</p>
   <div id="container_press_book">
     <div class="press_book">
-        <div id="2018">
-            <a href="">2018</a>
+        <div class="img_pb">
+          <h4>2018</h4>
+          <div>
+            <button>Télécharger</button>
+          </div>
         </div>
+    </div>
 
-        <div id="2019">
-            <a href="">2019</a>
+    <div class="press_book">
+      <div class="img_pb">
+        <h4>2019</h4>
+        <div>
+          <button>Télécharger</button>
         </div>
+      </div>
+    </div>
 
-        <div id="2020">
-            <a href="">2020</a>
-        </div>
-        <a href="">2021</a>
-        <div id="2021">
+    <div class="press_book">
+      <div class="img_pb">
+        <h4>2019</h4>
+      </div>
+    </div>
 
-        </div>
+    <div class="press_book">
+      <div class="img_pb">
+        <h4>2019</h4>
+      </div>
     </div>
   </div>
 
@@ -40,11 +54,25 @@ export default {
     }
   },
   mounted(){
-    /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
-        this.listeCategories = response.data;
-    });*/
   },
   methods:{
   }
 }
 </script>
+<style scoped>
+button {
+  font-family: Lato;
+}
+@media screen and (max-width: 3000px) {
+  p {
+    margin: 20px 20px 20px 65px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    margin: 20px auto;
+    width: 90%  ;
+  }
+}
+</style>
