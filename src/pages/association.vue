@@ -56,18 +56,17 @@
         <img id="rejoindre" src="../img/association/rejoindre.png" alt="rejoignez-nous">
       </div>
       <div class="texte_rejoindre">
-        <h1>FAITES PASSER LE MOT</h1>
+        <h2>FAITES PASSER LE MOT</h2>
         <p>Parlez à vos amis et à votre famille de cette association. En devenant vous-même un adhérant, vous préserverez le patrimoine du sud territoire et l'impact sera plus fort.</p>
         <div class="button">
           <button><router-link to="/rejoindre">Rejoindre l'association</router-link></button>
         </div>
       </div>
-
     </div>
 
     <div class="form_contact">
-        <div class="h1_form">
-          <h1>ÉCRIVEZ-NOUS</h1>
+        <div class="h2_form">
+          <h2>ÉCRIVEZ-NOUS</h2>
         </div>
             <form id="contact" method="post" action="#">
                 <div class="nom">
@@ -103,7 +102,7 @@
 
     <div class="article">
       <div class="article_1">
-        <h1>Article 1 : DÉNOMINATION DE L'ASSOCIATION</h1>
+        <h2>Article 1 : DÉNOMINATION DE L'ASSOCIATION</h2>
         <p>Il est fondé entre les adhérents aux présents statuts une association à buts non
           lucratifs, régie par la loi du 1er juillet 1901 et le décret du 16 août 1901 ainsi que
           par les lois et décrets subséquents, une association visant à étendre son rayon
@@ -114,7 +113,7 @@
         </p>
       </div>
        <div class="article_2">
-         <h1>Article 2 : BUTS DE L'ASSOCIATION</h1>
+         <h2>Article 2 : BUTS DE L'ASSOCIATION</h2>
          <p>La découverte, l’information, la recherche et la sauvegarde du patrimoine des villages irrigués par les rivières Cœuvatte, Suarcine et Vendeline.</p>
        </div>
     </div>
@@ -145,7 +144,7 @@
       }
 </script>
 <style scoped>
-.article_2 h1{
+.article_2 h2{
   padding: 40px 0 0 20px;
   margin-top: 0;
   border: white 0.5px solid;
@@ -161,7 +160,7 @@
   border: white 0.5px solid;
 }
 
-.article_1 h1{
+.article_1 h2{
   padding: 20px 0 0 20px;
   margin-top: 0;
 }

@@ -20,30 +20,27 @@
   <main>
 
     <div id="ancre"></div>
-    <!--<div class="container_bulletins">
-      <div id="bulletins" v-for="bulletin in bulletin" :key="bulletin.title">
-        <div class="cercle_h4">
+    <div class="container_bulletins">
+      <div id="bulletins" v-for="bulletin in bulletins" :key="bulletin.title">
+        <div class="cercle_h2">
           <div class="cercle"></div>
-          <div class="h4_texte"><h4>{{ bulletin.acf.titre_bulletin }}</h4></div>
+          <div class="h2_texte"><h2>{{ bulletin.titre_bulletin }}</h2></div>
         </div>
         <div class="contenu-bulletin">
           <div class="texte_bulletin">
-            <p>{{ bulletin.acf.sous_titre_bulletin }}</p>
-            <h3>{{ bulletin.acf.titre_association_bulletin }}</h3>
-            <p>
-              {{ bulletin.acf.texte_bulletin }}
-            </p>
+            <p>{{ bulletin.sous_titre_bulletin }}</p>
+            <h3>{{ bulletin.titre_association_bulletin }}</h3>
+            <p v-html="bulletin.texte_bulletin"></p>
           <div class="acheter">
             <button><i class="fas fa-pen"></i>Acheter</button>
           </div>
           </div>
           <div class="img_bulletins">
-            <img src="../img/accueil/bulletin_15.jpg" alt="">-->
-            <!--{{ bulletin.acf.image_bulletin }}-->
-        <!--</div>
+            <img :src="bulletin.image_bulletin.url" alt="bulletin.image_bulletin">
+        </div>
         </div>
       </div>
-    </div>-->
+    </div>
 
     <h1 id="h1_actualites">LES ACTUALITÉES DE L'association Cœuvatte Suarcine Vendeline</h1>
     <div class="logo_actu">
@@ -55,19 +52,18 @@
       </svg>
     </div>
     <div class="container_actualites">
-      <div id="actualites" v-for="actualite in actualite" :key="actualite.id">
+      <div id="actualites" v-for="actualite in actualites" :key="actualite.id">
         <div class="texte">
-          <div class="cercle_h4">
+          <div class="cercle_h2">
             <div class="cercle"></div>
-            <div class="h4_texte"><h4>{{ actualite.acf.titre_actualite }}</h4></div>
+            <div class="h2_texte"><h2>{{ actualite.titre_actualite }}</h2></div>
           </div>
-          <p>{{ actualite.acf.date_actualite_ }}</p>
-          <h3>{{ actualite.acf.sous_titre_actualite }}</h3>
-          <p>{{ actualite.acf.texte_actualite }}</p>
+          <p>{{ actualite.date_actualite_ }}</p>
+          <h3 style="font-family: Lato ">{{ actualite.sous_titre_actualite }}</h3>
+          <p v-html="actualite.texte_actualite"></p>
         </div>
         <div class="img_actualite">
-          <!--<img src="../img/accueil/2-10-21.png" alt="">-->
-          {{ actualite.acf.image_actualite}}
+          <img :src="actualite.image_actualite.url" alt="actualite.titre_actualite">
         </div>
       </div>
     </div>
@@ -89,16 +85,19 @@ export default {
   },
   data() {
     return {
-      actualite: [],
-      bulletin: [],
+      actualites: [],
+      bulletins: [],
     };
   },
 
-  async mounted() {
-    const result = await axios.get('http://csv/wordpress/wp-json/wp/v2/actualite')
-    this.actualite = result.data; this.bulletin = result.data;
-   /* await axios.get('http://csv/wordpress/wp-json/wp/v2/bulletin')
-    this.bulletin = result.data;*/
+  mounted() {
+    axios.get('http://csv/wordpress/wp-json/wp/v2/actualite').then((response) => {
+      this.actualites = response.data;
+    });
+
+    axios.get('http://csv/wordpress/wp-json/wp/v2/bulletin').then((response) => {
+      this.bulletins = response.data;
+    });
   },
 
   methods:{
@@ -117,12 +116,12 @@ main {
   background-color: #FAFAFA;
 }
 
-#bulletins p:first-of-type {
+#bulletins p:first-of-type, #actualites p:first-of-type {
   font-size: 14px;
   margin-bottom: 0;
 }
 
-#bulletins h3 {
+#bulletins h3, #actualites h3 {
   margin-top: 0;
 }
 
@@ -130,6 +129,9 @@ main {
   padding-right: 20px;
 }
 
+h2 {
+  font-size: 20px;
+}
 
 @media screen and (max-width: 3000px) {
   #h1_actualites {

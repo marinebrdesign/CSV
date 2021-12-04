@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     margin: 0;
     width: 100%;
+    scroll-behavior: smooth;
 }
 /*----------Page Association---------*/
 
@@ -41,13 +42,13 @@ html, body {
 
 
 
-.form_contact h1 {
+.form_contact h2 {
     margin-top: 0;
     padding-top: 15px;
     margin-bottom: 5px;
 }
 
-.h1_form {
+.h2_form {
     width: 170px;
     border-bottom: 3px black solid;
     margin: 0 auto 15px auto ;
@@ -210,7 +211,7 @@ html, body {
 }
 
 /*----------Pages liens---------*/
-.liens {
+.liens_container {
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -220,92 +221,17 @@ html, body {
     margin: 20px;
 }
 
-.liens_container {
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
+#liens {
+    background: linear-gradient(#D96B2B, #D8AF97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
     width: 330px;
     height: 230px;
     border-radius: 22px;
     margin: 20px 10px;
-}
-
-#lien_2 {
-    background-image: url("../../img/liens/lien_2.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_1 {
-    background-image: url("../../img/liens/lien_1.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_3 {
-    background-image: url("../../img/liens/lien_3.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_4 {
-    background-image: url("../../img/liens/lien_4.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_5 {
-    background-image: url("../../img/liens/lien_5.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_6 {
-    background-image: url("../../img/liens/lien_6.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_7 {
-    background-image: url("../../img/liens/lien_7.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_8 {
-    background-image: url("../../img/liens/lien_8.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_9 {
-    background-image: url("../../img/liens/lien_9.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_10 {
-    background-image: url("../../img/liens/lien_10.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_11 {
-    background-image: url("../../img/liens/lien_11.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_12 {
-    background-image: url("../../img/liens/lien_12.png");
-    background-size: cover;
-    height: 100%;
-}
-
-#lien_13 {
-    background-image: url("../../img/liens/lien_13.png");
-    background-size: cover;
-    height: 100%;
 }
 
 .liens_container svg {
@@ -331,7 +257,7 @@ html, body {
 }
 
 .liens_container p {
-    padding: 40px;
+    padding: 15px;
     margin: 0 auto;
     width: 200px;
 
@@ -357,7 +283,12 @@ html, body {
     padding-top: 10px;
 }
 
-#communes h3 {
+.img_ville img {
+    width:100%;
+    height: 100%;
+}
+
+#h_communes {
     color: #D96B2B;
     background-color: #FFFFFF;
     padding: 10px 20px 10px 20px;
@@ -368,12 +299,25 @@ html, body {
     font-size: 18px;
     text-align: center;
     margin: 0 auto;
-    text-align: center;
 }
 
-#communes p {
+#h_modale {
+    color: #D96B2B;
+    background-color: #FFFFFF;
+    padding: 10px 20px 10px 20px;
+    border-radius: 14px;
+    width: 90px;
+    position: relative;
+    top: -40px;
+    font-size: 18px;
     text-align: center;
-    padding: 20px;
+    margin: 0 auto;
+}
+
+
+#communes_texte {
+    text-align: center;
+    padding: 0 20px 20px 20px;
 }
 
 .lire button {
@@ -436,9 +380,10 @@ html, body {
 .img_actualite img {
     width: 100%;
     height: 100%;
+    border-radius: 22px;
 }
 
-.cercle, .h4_texte{
+.cercle, .h2_texte{
     display: inline-block;
 }
 
@@ -476,7 +421,7 @@ html, body {
     padding-bottom: 20px;
 }
 
-#bulletins .cercle_h4 {
+#bulletins .cercle_h2 {
     padding: 20px 0 0 50px;
 }
 
@@ -518,9 +463,6 @@ html, body {
 
 /*---------Press book------*/
 .press_book {
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
     width: 245px;
     height: 325px;
     border-radius: 22px;
@@ -528,8 +470,6 @@ html, body {
 }
 
 #container_press_book {
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -539,10 +479,7 @@ html, body {
 }
 
 .img_pb {
-   /* background-image: url("../../img/press_book/2018.png");
-    background-size: cover;*/
-    background: linear-gradient(#5996b0, #064A74);
-    border-radius: 22px;
+    border-radius: 22px;    background: linear-gradient(#5996b0, #064A74);
     height: 100%;
     display: flex;
     align-items: center;
@@ -566,16 +503,40 @@ html, body {
 
 .img_pb h4 {
     color: white;
-    width: 50%;
     margin: 0 auto;
     font-size: 70px;
 }
 
-/*flèche*/
-.fleche {
-    scroll-behavior: smooth;
-    overflow-y: scroll;
+/*--------Editions---------*/
+.bouton button{
+    background-color: #D96B2B;
+    border: none;
+    padding: 0 30px;
+    border-radius: 12px;
+    width: 260px;
+    height: 60px;
 }
+
+.bouton a  {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-weight: 700;
+    height: 45px;
+}
+
+.bouton {
+    margin: 20px;
+}
+
+.categorie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 25px auto;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
 /*---------Responsive------*/
 
 @media screen and (max-width: 3000px) {
@@ -675,7 +636,7 @@ html, body {
         margin-bottom: 50px;
     }
 
-    .rejoindre h1, .form_contact h1, .rejoindre p {
+    .rejoindre h2, .form_contact h2, .rejoindre p {
         text-align: center;
     }
 
@@ -720,7 +681,7 @@ html, body {
     }
 
     #communes p {
-        margin: 15px;
+        margin: 0 15px 15px 15px;
     }
 
     #communes{
@@ -854,6 +815,12 @@ html, body {
         width: 50%;
         height: 100%;
     }
+
+    .bouton button{
+        padding: 0;
+        width: 220px;
+        height: 50px;
+    }
 }
 @media screen and (max-width: 768px) {
     .association {
@@ -903,7 +870,7 @@ html, body {
         margin: 0 auto;
     }
 
-    .rejoindre h1, .form_contact h1, .rejoindre p {
+    .rejoindre h2, .form_contact h2, .rejoindre p {
         text-align: center;
     }
 
@@ -1015,6 +982,11 @@ html, body {
     #pb {
         display: none;
     }
+
+    #liens {
+        background: none;
+        background-color: white;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1022,6 +994,14 @@ html, body {
         .image_background {
             background-image: url("../../img/BG.png");
         }
+}
+
+
+@media screen and (max-width: 438px) {
+
+    #communes {
+        height: 425px;
+    }
 }
 
 

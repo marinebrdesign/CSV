@@ -91,140 +91,31 @@
             </svg>
           </div>
           <h1>DÉCOUVREZ TOUT LES LIENS</h1>
-          <a href="#lien_1">- Archives départementales du territoire de Belfort</a>
-          <a href="#lien_2">- Archives municipales de Belfort</a>
-          <a href="#lien_3">- Bibliothèque Nationale de France</a>
-          <a href="#lien_4">- Mémoire des hommes</a>
-          <a href="#lien_5">- Association Histoire et Patrimoine Sous-Vosgien</a>
-          <a href="#lien_6">- Les Amis du Moulin de Courtelevant</a>
-          <a href="#lien_7">- Société d’Histoire de Lure</a>
-          <a href="#lien_8">- Société Jurassienne d’Emulation (CH)</a>
-          <a href="#lien_9">- Union des patoisants en langue romane</a>
-          <a href="#lien_10">- Association Folklore comtois</a>
-          <a href="#lien_11">- Centre d’Entraide Généalogique</a>
-          <a href="#lien_12">- Musées de la ville de Belfort</a>
-          <a href="#lien_13">- Commune de Florimont</a>
+          <a href="#liens" v-for="lien in liens" :key="lien.id">{{ lien.nom_du_site }}</a>
+          <!-- <a href="#lien_1">- Archives départementales du territoire de Belfort</a>
+           <a href="#lien_2">- Archives municipales de Belfort</a>
+           <a href="#lien_3">- Bibliothèque Nationale de France</a>
+           <a href="#lien_4">- Mémoire des hommes</a>
+           <a href="#lien_5">- Association Histoire et Patrimoine Sous-Vosgien</a>
+           <a href="#lien_6">- Les Amis du Moulin de Courtelevant</a>
+           <a href="#lien_7">- Société d’Histoire de Lure</a>
+           <a href="#lien_8">- Société Jurassienne d’Emulation (CH)</a>
+           <a href="#lien_9">- Union des patoisants en langue romane</a>
+           <a href="#lien_10">- Association Folklore comtois</a>
+           <a href="#lien_11">- Centre d’Entraide Généalogique</a>
+           <a href="#lien_12">- Musées de la ville de Belfort</a>
+           <a href="#lien_13">- Commune de Florimont</a>-->
         </div>
         </div>
         <h1 id="lien">LIENS EXTERNES</h1>
-        <div class="liens">
-          <div class="liens_container">
-          <div id="lien_1">
-            <p>Archives départementales du territoire de Belfort</p>
+        <div class="liens_container">
+          <div id="liens" v-for="lien in liens" :key="lien.id">
+            <p v-html="lien.nom_du_site"></p>
             <div class="center">
-              <button><a href="https://archives.territoiredebelfort.fr/"><i class="fas fa-pen"></i>Lien</a></button>
+              <button><a :href="lien.lien_site"><i class="fas fa-pen"></i>Lien</a></button>
             </div>
           </div>
           </div>
-
-          <div class="liens_container">
-          <div id="lien_2">
-            <p>Archives municipales de Belfort</p>
-            <div class="center">
-              <button><a href="https://archives.belfort.fr"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-        </div>
-
-          <div class="liens_container">
-          <div id="lien_3">
-            <p>Bibliothèque Nationale de France</p>
-            <div class="center">
-              <button><a href="https://www.bnf.fr/fr"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_4">
-            <p>Mémoire des hommes</p>
-            <div class="center">
-              <button><a href="https://www.memoiredeshommes.sga.defense.gouv.fr/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_5">
-            <p>Association Histoire et Patrimoine Sous-Vosgien</p>
-            <div class="center">
-              <button><a href="https://sites.google.com/site/ahpsvtdp/home"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-        </div>
-
-          <div class="liens_container">
-          <div id="lien_6">
-            <p>Les Amis du Moulin de Courtelevant</p>
-            <div class="center">
-              <button><a href="https://www.amc.moulincourtelevant.fr/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_7">
-            <p>Société d’Histoire et d’Archéologie de l’Arrondissement de Lure</p>
-            <div class="center">
-              <button><a href="https://www.shaarl.com/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_8">
-            <p>Société Jurassienne d’Emulation (CH)</p>
-            <div class="center">
-              <button><a href="https://www.sje.ch/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_9">
-            <p>Union des patoisants en langue romane</p>
-            <div class="center">
-              <button><a href="https://www.patoisbelfort.fr/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_10">
-            <p>Association Folklore comtois</p>
-            <div class="center">
-              <button><a href="https://www.folklore-comtois.fr/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-            </div>
-
-          <div class="liens_container">
-          <div id="lien_11">
-            <p>Centre d’Entraide Généalogique de Franche-Comté</p>
-            <div class="center">
-              <button><a href="https://www.cegfc.net/www/index.php3"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-            <div id="lien_12">
-            <p>Musées de la ville de Belfort</p>
-            <div class="center">
-              <button><a href="https://musees.belfort.fr/accueil-991.html"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-
-          <div class="liens_container">
-          <div id="lien_13">
-            <p>Commune de Florimont</p>
-            <div class="center">
-              <button><a href="https://florimont.fr/"><i class="fas fa-pen"></i>Lien</a></button>
-            </div>
-          </div>
-          </div>
-        </div>
       </div>
 
 
@@ -235,6 +126,7 @@
 <script>
 import CFooter from '../components/c-footer.vue'
 import CHeader from '../components/c-header.vue'
+import axios from "axios";
 export default {
   components: {
     CFooter,
@@ -242,15 +134,15 @@ export default {
   },
   data(){
     return {
+      liens: [],
     }
   },
-  mounted(){
-    /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
-        this.listeCategories = response.data;
-    });*/
+
+  mounted() {
+    axios.get('http://csv/wordpress/wp-json/wp/v2/lien').then((response) => {
+      this.liens = response.data;
+    });
   },
-  methods:{
-  }
 }
 </script>
 <style scoped>

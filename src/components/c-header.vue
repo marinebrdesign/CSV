@@ -146,7 +146,7 @@ ul {
   .navbar__link > a {
     display:block;
     padding:1rem;
-    font-size:1.6rem;
+    font-size:50px;
     color:black;
     transition: all .4s ease-in-out;
   }

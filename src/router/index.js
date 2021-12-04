@@ -10,6 +10,9 @@ import Politique_Confidentialite from '../pages/politique_confidentialite.vue'
 import Press_Book from '../pages/press_book.vue'
 import Rejoindre from '../pages/rejoindre.vue'
 import test from '../pages/test.vue'
+import cahiers from '../pages/cahiers.vue'
+import livres from '../pages/livres.vue'
+import bulletins from '../pages/bulletins.vue'
 
 
 Vue.use(VueRouter)
@@ -19,6 +22,24 @@ const routes = [
     path: '/test',
     name: 'test',
     component: test,
+  },
+
+  {
+    path: '/bulletins',
+    name: 'bulletins',
+    component: bulletins,
+  },
+
+  {
+    path: '/livres',
+    name: 'livres',
+    component: livres,
+  },
+
+  {
+    path: '/cahiers',
+    name: 'cahiers',
+    component: cahiers,
   },
 
   {

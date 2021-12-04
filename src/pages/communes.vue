@@ -116,7 +116,7 @@
               </svg>
             </div>
             <h1>DÉCOUVREZ TOUTES NOS COMMUNES</h1>
-            <a href="#communes" v-for="commune in commune" :key="commune.id">{{ commune.acf.nom_commune }}</a>
+            <a href="#communes" v-for="commune in communes" :key="commune.id">{{ commune.nom_commune }}</a>
             <!--<a href="#courcelles">- Courcelles</a>
             <a href="#courtelevant">- Courtelevant</a>
             <a href="#delle">- Delle</a>
@@ -131,16 +131,15 @@
         </div>
 
         <div id="container_communes">
-          <div id="communes" v-for="commune in commune" :key="commune.id">
+          <div id="communes" v-for="commune in communes" :key="commune.id">
           <div class="img_ville">
-            {{ commune.acf.image_commune}}
-              <!--<img width="220px" src="../img/chavanatte.png" alt="chavanatte">-->
+            <img :src="commune.image_commune.url" alt="commune.nom_commune">
             </div>
-            <h3>{{ commune.acf.nom_commune }}</h3>
-            <p>{{ commune.acf.extrait_texte_commune }}</p>
+            <h3 id="h_communes">{{ commune.nom_commune }}</h3>
+            <p id="communes_texte" v-html="commune.extrait_texte_commune"></p>
             <div class="lire">
-              <div v-on:click="toggleModale" class="btn btn-success"><button>Lire la suite</button></div>
-              <modale :revele="revele" :toggleModale="toggleModale"></modale>
+              <div class="btn btn-success"><button @click="setRevele(commune.id)">Lire la suite</button></div>
+              <modale :show="revele == commune.id" :commune="commune" @leaveModal="resetRevele"></modale>
             </div>
           </div>
         </div>
@@ -156,7 +155,7 @@ import CHeader from '../components/c-header.vue'
 import Modale from './modale.vue';
 
 export default {
-  name: 'Contenu',
+  name: 'Communes',
   components: {
     CFooter,
     CHeader,
@@ -164,19 +163,23 @@ export default {
   },
   data() {
     return {
-      revele: false,
-      commune: [],
+      revele: -1,
+      communes: [],
     };
   },
-    async mounted() {
-    const result = await axios.get('http://csv/wordpress/wp-json/wp/v2/commune')
-    this.commune = result.data;
-        },
   methods: {
-    toggleModale: function () {
-      this.revele = !this.revele;
+    setRevele(id) {
+      this.revele = id
+    },
+    resetRevele() {
+      this.revele = -1;
     }
-  }
+  },
+  mounted() {
+    axios.get('http://csv/wordpress/wp-json/wp/v2/commune').then((response) => {
+      this.communes = response.data;
+    });
+  },
 }
 
 </script>

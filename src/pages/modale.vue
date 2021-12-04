@@ -1,40 +1,40 @@
 <template>
-  <div class="bloc-modale" v-if="revele">
-    <div class="overlay" v-on:click="toggleModale"></div>
-    <div class="modale card" v-for="commune in commune" :key="commune.id">
-      <div v-on:click="toggleModale" class="btn-modale btn btn-danger">X</div>
-      <h3>{{commune.acf.nom_commune}}</h3>
-      <p>
-        {{commune.acf.texte_commune}}
-      </p>
+  <div class="bloc-modale" v-if="show">
+    <div class="overlay">
+      <div class="modale card">
+        <div class="btn-modale btn btn-danger" @click="emitEvent"><i class="fas fa-times fa-2x"></i></div>
+        <h3 id="h_modale">{{commune.nom_commune}}</h3>
+        <p id="modale" v-html="commune.texte_commune"></p>
+      </div>
     </div>
   </div>
 </template>
 
 
 <script>
-import axios from 'axios';
-
 export default {
   name: "Modale",
-  props: ["revele", "toggleModale"],
-  data() {
-    return {
-      commune: [],
-    };
-  },
-  async mounted() {
-    const result = await axios.get('http://csv/wordpress/wp-json/wp/v2/commune')
-    this.commune = result.data;
-  },
+  props: ["show", "commune"],
   methods: {
-
+    emitEvent() {
+      this.$emit('leaveModal')
+    }
   }
 };
 </script>
 
 
 <style scoped>
+
+svg {
+  color: #0E486D;
+  padding: 10px;
+}
+
+#modale {
+  text-align: left;
+}
+
 .bloc-modale {
   position: fixed;
   top: 0;
@@ -47,7 +47,7 @@ export default {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background-color: #0E486D;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -56,11 +56,13 @@ export default {
 }
 
 .modale {
-  background: #f1f1f1;
+  background: white;
   color: #333;
-  padding: 50px;
+  padding: 25px;
   position: fixed;
-  top: 30%;
+  margin: 15px;
+  top: 10px;
+  border-radius: 22px;
 }
 
 .btn-modale {
@@ -68,4 +70,32 @@ export default {
   top: 10px;
   right: 10px;
 }
+
+@media screen and (max-width: 3000px) {
+
+  .modale {
+    background: white;
+    color: #333;
+    padding: 25px;
+    position: fixed;
+    margin: 15px;
+    top: 10px;
+    height: 70%;
+    border-radius: 22px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .modale {
+    background: white;
+    color: #333;
+    padding: 25px;
+    position: fixed;
+    margin: 15px;
+    top: 10px;
+    height: 89%;
+    border-radius: 22px;
+  }
+}
+
 </style>

@@ -2,8 +2,11 @@
   <div>
 <main>
   <a href="javascript:history.go(-1)"><i class="fas fa-chevron-left"></i><b>retour</b></a>
-  <h2>MENTIONS LÉGALES</h2>
-    <p>Cette page décrit les mentions légales qui s'appliquent à tout internaute visitant ce site. En le consultant vous vous engagez sans réserve à les respecter. Les mentions légales pouvant être modifiées à tout moment et sans préavis, nous vous engageons à les consulter régulièrement. </p>
+  <div v-for="mentions_legales in mentions_legales" :key="mentions_legales.title">
+    <h2>MENTIONS LÉGALES</h2> 
+    <p v-html="mentions_legales.acf.texte_mentions_legales"></p>
+  </div>
+    <!--<p>Cette page décrit les mentions légales qui s'appliquent à tout internaute visitant ce site. En le consultant vous vous engagez sans réserve à les respecter. Les mentions légales pouvant être modifiées à tout moment et sans préavis, nous vous engageons à les consulter régulièrement. </p>
 
         <h4>Responsable éditorial et responsable légal</h4>
         <p>Association CSV <br>
@@ -39,6 +42,8 @@
 
         <h4>Déclaration à la CNIL :</h4>
         <p>Conformément à la loi 78-17 du 6 janvier 1978 (modifiée par la loi 2004-801 du 6 août 2004 relative à la protection des personnes physiques à l’égard des traitements de données à caractère personnel) relative à l’informatique, aux fichiers et aux libertés, ce site n’a pas fait l’objet d’une déclaration auprès de la Commission nationale de l’informatique et des libertés (www.cnil.fr). Pour plus d’informations sur le traitement de nos données sensibles, veuillez consulter notre Politique de Confidentialité.</p>
+-->
+
 </main>
 <c-footer></c-footer>
 
@@ -46,18 +51,20 @@
 </template>
 <script>
 import CFooter from '../components/c-footer.vue'
+import axios from "axios";
 export default {
   components: {
     CFooter,
   },
   data(){
     return {
+      mentions_legales: [],
     }
   },
   mounted(){
-    /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
-        this.listeCategories = response.data;
-    });*/
+    axios.get('http://csv/wordpress/wp-json/wp/v2/mentions_legales').then((response) => {
+      this.mentions_legales = response.data;
+    });
   },
   methods:{
   }

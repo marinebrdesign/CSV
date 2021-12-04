@@ -1,39 +1,33 @@
 <template>
   <div>
-		<c-header></c-header>
+
+    <div class="image_background">
+      <c-header></c-header>
+      <div class="presentation">
+        <div class="logo">
+          <img src="../img/Logo.png" alt="logo_csv">
+        </div>
+        <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
+        <p>Les press books de l'association</p>
+        <div class="fleche">
+          <a href="#ancre"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg></a>
+        </div>
+      </div>
+    </div>
 
 <main>
+
+  <div id="ancre"></div>
   <h1 id="pb">PRESS BOOK</h1>
   <p>Afin de consulter un press book, veuillez télécharger celui-ci à partir du bouton "Télécharger".</p>
   <div id="container_press_book">
-    <div class="press_book">
+    <div class="press_book" v-for="press_book in press_books" :key="press_book.id">
         <div class="img_pb">
-          <h4>2018</h4>
+          <h4>{{press_book.annee_press_book}}</h4>
           <div>
             <button>Télécharger</button>
           </div>
         </div>
-    </div>
-
-    <div class="press_book">
-      <div class="img_pb">
-        <h4>2019</h4>
-        <div>
-          <button>Télécharger</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="press_book">
-      <div class="img_pb">
-        <h4>2019</h4>
-      </div>
-    </div>
-
-    <div class="press_book">
-      <div class="img_pb">
-        <h4>2019</h4>
-      </div>
     </div>
   </div>
 
@@ -44,6 +38,7 @@
 <script>
 import CFooter from '../components/c-footer.vue'
 import CHeader from '../components/c-header.vue'
+import axios from "axios";
 export default {
   components: {
     CFooter,
@@ -51,10 +46,16 @@ export default {
   },
   data(){
     return {
+      press_books: [],
     }
   },
-  mounted(){
+
+  mounted() {
+    axios.get('http://csv/wordpress/wp-json/wp/v2/press_book').then((response) => {
+      this.press_books = response.data;
+    });
   },
+
   methods:{
   }
 }
@@ -67,12 +68,27 @@ button {
   p {
     margin: 20px 20px 20px 65px;
   }
+
+  .presentation p {
+    font-family: "Bebas Neue";
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   p {
     margin: 20px auto;
     width: 90%  ;
+  }
+
+  .presentation p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .presentation p {
+    font-size: 25px;
   }
 }
 </style>

@@ -5,7 +5,7 @@
           <div class="footer_row">
           <ul class="nav">
               <li>
-                <router-link to="/accueil">Accueil</router-link>
+                <router-link to="/">Accueil</router-link>
               </li>
               <li>
                 <router-link to="/association">Association</router-link>
