@@ -152,7 +152,7 @@
 import axios from 'axios';
 import CFooter from '../components/c-footer.vue'
 import CHeader from '../components/c-header.vue'
-import Modale from './modale.vue';
+import Modale from '../components/modale.vue';
 
 export default {
   name: 'Communes',

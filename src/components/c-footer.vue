@@ -30,7 +30,7 @@
               <li>
                 <router-link to="/politique_confidentialite">Politique de confidentialité</router-link>
               </li>
-              <li><p>Suivez-nous<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-f"></i></a></p></li>
+              <li><a href="https://fr-fr.facebook.com/">Suivez-nous<i class="fab fa-facebook-f"></i></a></li>
               <li><img src="../img/Logo.png" width="50" height="50" alt="logo_csv"></li>
             </ul>
           </div>
@@ -44,9 +44,6 @@ export default {
     }
   },
   mounted(){
-    /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
-        this.listeCategories = response.data;
-    });*/
   },
   methods:{
   }
