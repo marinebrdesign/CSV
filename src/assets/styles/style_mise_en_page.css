@@ -303,45 +303,46 @@ html, body {
 
 #h_modale {
     color: #D96B2B;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     padding: 10px 20px 10px 20px;
-    border-radius: 14px;
-    width: 90px;
-    position: relative;
-    top: -40px;
+    /* border-radius: 14px; */
+    /* width: 90px; */
+    /* position: relative; */
+    /* top: -35px; */
     font-size: 18px;
     text-align: center;
     margin: 0 auto;
+/* z-index: 3;*/
 }
 
 
 #communes_texte {
-    text-align: center;
-    padding: 0 20px 20px 20px;
+text-align: center;
+padding: 0 20px 20px 20px;
 }
 
 .lire button {
-    background-color: #2F558E;
-    color: #FFFFFF;
-    border: none;
-    padding: 10px;
-    border-radius: 22px;
-    width: 140px;
-    font-family: Lato;
-    font-weight: 700;
+background-color: #2F558E;
+color: #FFFFFF;
+border: none;
+padding: 10px;
+border-radius: 22px;
+width: 140px;
+font-family: Lato;
+font-weight: 700;
 }
 
 .lire {
-    margin: 0 auto 10px auto;
-    width: 140px;
+margin: 0 auto 10px auto;
+width: 140px;
 }
 #container_communes, #container_decouvrez, #container_livres, #container_bulletins, #container_cahiers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin: 20px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: flex-start;
+flex-wrap: wrap;
+margin: 20px;
 }
 
 /*---------actualités------*/

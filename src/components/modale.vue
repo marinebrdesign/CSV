@@ -55,7 +55,7 @@ svg {
   right: 0;
 }
 
-.modale {
+/*.modale {
   background: white;
   color: #333;
   padding: 25px;
@@ -63,7 +63,20 @@ svg {
   margin: 15px;
   top: 10px;
   border-radius: 22px;
+}*/
+.modale {
+  background: white;
+  color: #333;
+  padding: 25px;
+  position: relative;
+  border-radius: 22px;
+  width: 90%;
+  margin: 0 auto;
+  height: 80%;
+  overflow-y: auto;
+  top: 35px;
 }
+
 
 .btn-modale {
   position: absolute;
@@ -73,7 +86,7 @@ svg {
 
 @media screen and (max-width: 3000px) {
 
-  .modale {
+ /* .modale {
     background: white;
     color: #333;
     padding: 25px;
@@ -83,10 +96,10 @@ svg {
     height: 70%;
     border-radius: 22px;
   }
-
+*/
 }
 @media screen and (max-width: 768px) {
-  .modale {
+ /* .modale {
     background: white;
     color: #333;
     padding: 25px;
@@ -95,6 +108,10 @@ svg {
     top: 10px;
     height: 89%;
     border-radius: 22px;
+  }*/
+
+  .modale {
+    width: 70%;
   }
 }
 
