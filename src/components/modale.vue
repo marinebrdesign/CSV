@@ -55,15 +55,6 @@ svg {
   right: 0;
 }
 
-/*.modale {
-  background: white;
-  color: #333;
-  padding: 25px;
-  position: fixed;
-  margin: 15px;
-  top: 10px;
-  border-radius: 22px;
-}*/
 .modale {
   background: white;
   color: #333;
@@ -84,32 +75,7 @@ svg {
   right: 10px;
 }
 
-@media screen and (max-width: 3000px) {
-
- /* .modale {
-    background: white;
-    color: #333;
-    padding: 25px;
-    position: fixed;
-    margin: 15px;
-    top: 10px;
-    height: 70%;
-    border-radius: 22px;
-  }
-*/
-}
 @media screen and (max-width: 768px) {
- /* .modale {
-    background: white;
-    color: #333;
-    padding: 25px;
-    position: fixed;
-    margin: 15px;
-    top: 10px;
-    height: 89%;
-    border-radius: 22px;
-  }*/
-
   .modale {
     width: 70%;
   }

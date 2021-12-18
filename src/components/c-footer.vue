@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background-color: black">
         <footer>
             <h4>ASSOCIATION <br>Cæuvatte-Suarcine-Vendeline</h4>
           <div class="footer_row">
@@ -30,32 +30,39 @@
               <li>
                 <router-link to="/politique_confidentialite">Politique de confidentialité</router-link>
               </li>
-              <li><a href="https://fr-fr.facebook.com/">Suivez-nous<i class="fab fa-facebook-f"></i></a></li>
-              <li><img src="../img/Logo.png" width="50" height="50" alt="logo_csv"></li>
+              <li>
+                <div v-for="logo in logos" :key="logo.id">
+                  <img :src="logo.acf.img_logo.url" alt="le logo de l'association" width="50px" height="50px">
+                </div>
+              </li>
             </ul>
           </div>
         </footer>
     </div>
 </template>
 <script>
+import axios from "axios";
+
 export default {
   data(){
     return {
+      logos:[],
     }
   },
-  mounted(){
+  mounted(){   axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+    this.logos = response.data;
+  });
+
   },
   methods:{
   }
 }
 </script>
 <style scoped>
-@media  {
-  
-}
-  h4 {
+
+h4 {
     margin-top: 0;
     font-family: Lato;
     font-size: 18px;
-  }
+}
 </style>

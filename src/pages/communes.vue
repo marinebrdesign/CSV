@@ -3,8 +3,8 @@
     <div class="image_background">
       <c-header></c-header>
       <div class="presentation">
-        <div class="logo">
-          <img src="../img/Logo.png" alt="logo_csv">
+        <div class="logo" v-for="logo in logos" :key="logo.id">
+          <img :src="logo.acf.img_logo.url" alt="le logo de l'association">
         </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Les commnunes de l'association</p>
@@ -116,22 +116,12 @@
               </svg>
             </div>
             <h1>DÉCOUVREZ TOUTES NOS COMMUNES</h1>
-            <a href="#communes" v-for="commune in communes" :key="commune.id">{{ commune.nom_commune }}</a>
-            <!--<a href="#courcelles">- Courcelles</a>
-            <a href="#courtelevant">- Courtelevant</a>
-            <a href="#delle">- Delle</a>
-            <a href="#faverois">- Faverois</a>
-            <a href="#florimont">- Florimont</a>
-            <a href="#grandvillars">- Grandvillars</a>
-            <a href="#jonchery">- Jonchery</a>
-            <a href="#lepuix_neuf">- Lepuix-Neuf</a>
-            <a href="#rechesy">- Réchésy</a>
-            <a href="#suarce">- Suarce</a>-->
+            <a :href="'#' + commune.nom_commune" v-for="commune in communes" :key="commune.id">{{ commune.nom_commune }}</a>
           </div>
         </div>
 
         <div id="container_communes">
-          <div id="communes" v-for="commune in communes" :key="commune.id">
+          <div :id="commune.nom_commune" v-for="commune in communes" :key="commune.id">
           <div class="img_ville">
             <img :src="commune.image_commune.url" alt="commune.nom_commune">
             </div>
@@ -165,6 +155,7 @@ export default {
     return {
       revele: -1,
       communes: [],
+      logos: [],
     };
   },
   methods: {
@@ -178,6 +169,10 @@ export default {
   mounted() {
     axios.get('http://csv/wordpress/wp-json/wp/v2/commune').then((response) => {
       this.communes = response.data;
+    });
+
+    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+      this.logos = response.data;
     });
   },
 }

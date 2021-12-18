@@ -5,8 +5,8 @@
     <div class="image_background">
       <c-header></c-header>
       <div class="presentation">
-        <div class="logo">
-          <img src="../img/Logo.png" alt="logo_csv">
+        <div class="logo" v-for="logo in logos" :key="logo.id">
+          <img :src="logo.acf.img_logo.url" alt="le logo de l'association">
         </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Bienvenue sur le site de l’association Cœuvatte-Suarcine-Vendeline (CSV) :
@@ -32,7 +32,7 @@
             <h3>{{ bulletin.titre_association_bulletin }}</h3>
             <p v-html="bulletin.texte_bulletin"></p>
           <div class="acheter">
-            <button><i class="fas fa-pen"></i>Acheter</button>
+            <router-link to="/acheter"><button><i class="fas fa-pen"></i>Acheter</button></router-link>
           </div>
           </div>
           <div class="img_bulletins">
@@ -87,6 +87,7 @@ export default {
     return {
       actualites: [],
       bulletins: [],
+      logos: [],
     };
   },
 
@@ -98,6 +99,10 @@ export default {
     axios.get('http://csv/wordpress/wp-json/wp/v2/bulletin').then((response) => {
       this.bulletins = response.data;
     });
+
+    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+      this.logos = response.data;
+    });
   },
 
   methods:{
@@ -107,13 +112,13 @@ export default {
 
 <style scoped>
 
-
 .texte p, .texte_bulletin p {
   font-size: 16px;
 }
 
 main {
   background-color: #FAFAFA;
+  position: relative;
 }
 
 #bulletins p:first-of-type, #actualites p:first-of-type {

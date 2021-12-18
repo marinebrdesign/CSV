@@ -18,7 +18,7 @@
         </div>
         <p id="prix" v-html="bulletin_editions.prix_bulletin"></p>
         <div class="bouton_panier">
-          <div class="btn btn-success"><button @click="setRevele(bulletin_editions.id)">Ajouter au panier</button></div>
+          <div class="btn btn-success"><router-link to="/acheter"><button @click="setRevele(bulletin_editions.id)">Acheter</button></router-link></div>
         </div>
       </div>
     </div>

@@ -4,8 +4,8 @@
     <div class="image_background">
       <c-header></c-header>
       <div class="presentation">
-        <div class="logo">
-          <img src="../img/Logo.png" alt="logo_csv">
+        <div class="logo" v-for="logo in logos" :key="logo.id">
+          <img :src="logo.acf.img_logo.url" alt="le logo de l'association">
         </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Les press books de l'association</p>
@@ -25,7 +25,7 @@
         <div class="img_pb">
           <h4>{{press_book.annee_press_book}}</h4>
           <div>
-            <button>Télécharger</button>
+            <button><a :href="press_book.fichier_press_book.url" download="">Télécharger</a></button>
           </div>
         </div>
     </div>
@@ -47,12 +47,17 @@ export default {
   data(){
     return {
       press_books: [],
+      logos: [],
     }
   },
 
   mounted() {
     axios.get('http://csv/wordpress/wp-json/wp/v2/press_book').then((response) => {
       this.press_books = response.data;
+    });
+
+    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+      this.logos = response.data;
     });
   },
 

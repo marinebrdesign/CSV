@@ -4,7 +4,6 @@
   <nav class="navbar" role="navigation" :class="showNav?'show-nav':''">
     <div class="navbar__logo"><div class="csv">CSV /</div> <span>CŒUVATTE-SUARCINE-VENDELINE</span></div>
     <ul class="navbar__links">
-      <!--<li class="navbar__logo"><div class="csv_2">CSV / <span>CŒUVATTE-SUARCINE-VENDELINE</span></div><li>-->
       <li class="navbar__link"><router-link to="/">ACCUEIL</router-link></li>
       <li class="navbar__link"><router-link to="/association">ASSOCIATION</router-link></li>
       <li class="navbar__link"><router-link to="/editions">ÉDITIONS</router-link></li>
@@ -28,9 +27,6 @@ export default {
     }
   },
   mounted(){
-    /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
-        this.listeCategories = response.data;
-    });*/
   },
   methods:{
     toggleMenu() {

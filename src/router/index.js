@@ -12,11 +12,16 @@ import Rejoindre from '../pages/rejoindre.vue'
 import cahiers from '../pages/cahiers.vue'
 import livres from '../pages/livres.vue'
 import bulletins from '../pages/bulletins.vue'
-
+import acheter from '../pages/acheter.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/acheter',
+    name: 'acheter',
+    component: acheter,
+  },
   {
     path: '/bulletins',
     name: 'bulletins',

@@ -3,8 +3,8 @@
     <div class="image_background">
         <c-header></c-header>
       <div class="presentation">
-        <div class="logo">
-          <img src="../img/Logo.png" alt="logo_csv">
+        <div class="logo" v-for="logo in logos" :key="logo.id">
+          <img :src="logo.acf.img_logo.url" alt="le logo de l'association">
         </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Les liens externes </p>
@@ -91,25 +91,12 @@
             </svg>
           </div>
           <h1>DÉCOUVREZ TOUT LES LIENS</h1>
-          <a href="#liens" v-for="lien in liens" :key="lien.id">{{ lien.nom_du_site }}</a>
-          <!-- <a href="#lien_1">- Archives départementales du territoire de Belfort</a>
-           <a href="#lien_2">- Archives municipales de Belfort</a>
-           <a href="#lien_3">- Bibliothèque Nationale de France</a>
-           <a href="#lien_4">- Mémoire des hommes</a>
-           <a href="#lien_5">- Association Histoire et Patrimoine Sous-Vosgien</a>
-           <a href="#lien_6">- Les Amis du Moulin de Courtelevant</a>
-           <a href="#lien_7">- Société d’Histoire de Lure</a>
-           <a href="#lien_8">- Société Jurassienne d’Emulation (CH)</a>
-           <a href="#lien_9">- Union des patoisants en langue romane</a>
-           <a href="#lien_10">- Association Folklore comtois</a>
-           <a href="#lien_11">- Centre d’Entraide Généalogique</a>
-           <a href="#lien_12">- Musées de la ville de Belfort</a>
-           <a href="#lien_13">- Commune de Florimont</a>-->
+          <a :href="'#' + lien.nom_du_site " v-for="lien in liens" :key="lien.id">{{ lien.nom_du_site }}</a>
         </div>
         </div>
         <h1 id="lien">LIENS EXTERNES</h1>
         <div class="liens_container">
-          <div id="liens" v-for="lien in liens" :key="lien.id">
+          <div :id="lien.nom_du_site" v-for="lien in liens" :key="lien.id">
             <p v-html="lien.nom_du_site"></p>
             <div class="center">
               <button><a :href="lien.lien_site"><i class="fas fa-pen"></i>Lien</a></button>
@@ -135,12 +122,17 @@ export default {
   data(){
     return {
       liens: [],
+      logos: [],
     }
   },
 
   mounted() {
     axios.get('http://csv/wordpress/wp-json/wp/v2/lien').then((response) => {
       this.liens = response.data;
+    });
+
+    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+      this.logos = response.data;
     });
   },
 }

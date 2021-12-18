@@ -4,29 +4,21 @@
 
 <main>
     <div class="row">
-      <div class="association">
+      <div class="association" v-for="asso_presentation in asso_presentations" :key="asso_presentation.id">
         <h2>L'ASSOCIATION CŒUVATTE-SUARCINE-VENDELINE (ASSOCIATION CSV)</h2>
-        <p>Est une association créée en 2005 pour la découverte, l’information, la restauration et la sauvegarde du Patrimoine des villages irrigués par trois rivières : la Cœuvatte, la Suarcine et la Vendeline.
-          <br>
-          <br>Elle a ensuite étendu son action sur un secteur géographique couvrant le sud du Territoire de Belfort. Son siège social est maintenant situé à Delle. L’association compte un peu plus d’une centaine de membres et est en lien avec d’autres associations du Territoire de Belfort, du Doubs, du Haut-Rhin et de Suisse. Elle est présidée par Michel Colney.
-          <br>
-
-          <br>Chaque année l’association édite un bulletin avec des articles concernant l’histoire locale écrits pour la plupart par ses membres, elle publie des livres, organise des conférences et des sorties à la découverte du patrimoine de notre région, des régions voisines et de Suisse.
-          <br>
-
-          <br>Le montant de l’adhésion annuelle est fixé à 23 €, chaque adhérent à jour de cotisation reçoit le bulletin de l’année en cours.</p>
+        <p v-html="asso_presentation.acf.presentation_association"></p>
       </div>
 
-      <div class="contact">
+      <div class="contact" v-for="contact in contacts" :key="contact.id">
         <h2>CONTACT</h2>
         <div class="mail">
           <div class="svg_mail">
             <i class="far fa-envelope fa-3x"></i>
           </div>
           <h4>E-MAIL</h4>
-          <p>Secrétaire : <a href="mailto:akleiber@csv-patrimoine.org">akleiber@csv-patrimoine.org</a></p>
-          <p>Trésorier : <a href="mailto:hubert.gauchey@free.fr">hubert.gauchey@free.fr</a></p>
-          <p>Édition C-S-V : <a href="mailto:edition@csv-patrimoine.org">edition@csv-patrimoine.org</a></p>
+          <p>Secrétaire : <a :href="'mailto:' + contact.acf.mail_secretaire">{{contact.acf.mail_secretaire}}</a></p>
+          <p>Trésorier : <a :href="'mailto:' + contact.acf.mail_tresorier">{{contact.acf.mail_tresorier}}</a></p>
+          <p>Édition C-S-V : <a :href="'mailto:' + contact.acf.mail_edition_csv">{{contact.acf.mail_edition_csv}}</a></p>
         </div>
 
         <div class="row">
@@ -34,9 +26,8 @@
             <div class="svg_adresse">
               <i class="fas fa-map-marker-alt fa-3x"></i>
             </div>
-            <h4>ADRESSE</h4>
-            <a href="https://www.google.fr/maps/place/10+Rue+Andr%C3%A9+Boulloche,+90100+Delle/@47.4994721,6.9882895,17z/data=!3m1!4b1!4m5!3m4!1s0x47921ef7b6b0beb3:0x318eefc22fc7d228!8m2!3d47.4994721!4d6.9904782">10 rue André Boulloche
-              <br>90100, DELLE</a>
+            <h4>SIÈGE DE L'ASSOCIATION</h4>
+            <p v-html="contact.acf.adresse"></p>
           </div>
 
           <div class="tel">
@@ -44,77 +35,66 @@
               <i class="fas fa-phone-alt fa-3x"></i>
             </div>
             <h4>CONTACT</h4>
-            <a href="tel:+33384296460">+33 3 84 29 64 60</a>
+            <p>{{contact.acf.telephone}}</p>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div class="rejoindre">
+    <div class="rejoindre" v-for="texte_rejoindre in textes_rejoindre" :key="texte_rejoindre.id">
       <div class="img_rejoindre">
         <img id="rejoindre" src="../img/association/rejoindre.png" alt="rejoignez-nous">
       </div>
       <div class="texte_rejoindre">
-        <h2>FAITES PASSER LE MOT</h2>
-        <p>Parlez à vos amis et à votre famille de cette association. En devenant vous-même un adhérant, vous préserverez le patrimoine du sud territoire et l'impact sera plus fort.</p>
+        <h2>{{ texte_rejoindre.acf.titre_rejoindre }}</h2>
+        <p v-html="texte_rejoindre.acf.texte_rejoindre"></p>
         <div class="button">
+
           <button><router-link to="/rejoindre">Rejoindre l'association</router-link></button>
         </div>
       </div>
     </div>
 
-    <div class="form_contact">
-        <div class="h2_form">
-          <h2>ÉCRIVEZ-NOUS</h2>
-        </div>
-            <form id="contact" method="post" action="#">
-                <div class="nom">
-                    <label for="nom"></label>
-                    <input type="text" placeholder="Nom" id="nom" name="name" required>
-                </div>
-                <div class="prenom">
-                    <label for="prenom"></label>
-                    <input type="text" placeholder="Prénom" id="prenom" name="firstname" required>
-                </div>
-                <div class="mail">
-                    <label for="mail"></label>
-                    <input type="email" placeholder="Adresse mail" id="mail" name="mail" required>
-                </div>
-              <div class="msg">
-                <label for="msg"></label>
-                <textarea id="msg" placeholder="Message" name="message" required cols="30" rows="5"></textarea>
-              </div>
-              <div class="envoyer">
-                <button type="submit">
-                  <div id="carre">
-                    <i class="fas fa-paper-plane fa-2x"></i>
-                  </div>
-                </button>
-              </div>
+  <div class="form_contact">
+    <div class="h2_form">
+      <h2>ÉCRIVEZ-NOUS</h2>
+    </div>
+    <form id="contact" action="mailto:marinebeurier22@gmail.com" method="post" enctype="text/plain">
+      <div class="nom">
+        <input type="text" name="Nom" placeholder="Nom" required>
+      </div>
+      <div class="prenom">
+        <input type="text" name="Prenom" placeholder="Prénom" required><br>
+      </div>
+      <div class="mail">
+        <input type="text" name="E-mail" placeholder="E-mail" required>
+      </div>
+      <div class="msg">
+        <textarea id="msg" placeholder="Message" name="Message" required cols="30" rows="5"></textarea>
+      </div>
+      <div class="envoyer">
+        <button type="submit">
+          <div id="carre">
+            <i class="fas fa-paper-plane fa-2x"></i>
+          </div>
+        </button>
+      </div>
+    </form>
+  </div>
 
-            </form>
-        </div>
-
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.509291073717!2d6.988289515606612!3d47.499472079177764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47921ef7b6b0beb3%3A0x318eefc22fc7d228!2s10%20Rue%20Andr%C3%A9%20Boulloche%2C%2090100%20Delle!5e0!3m2!1sfr!2sfr!4v1636643248131!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.06562960039!2d7.11305811568506!3d47.50811307917829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791f48b654f3c65%3A0x4318a1d74cc85455!2s10%20Rue%20des%20Fontaines%2C%2090370%20R%C3%A9ch%C3%A9sy!5e0!3m2!1sfr!2sfr!4v1639736733804!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <div class="article">
+    <div class="article" v-for="article_association in articles_association" :key="article_association.id">
       <div class="article_1">
         <h2>Article 1 : DÉNOMINATION DE L'ASSOCIATION</h2>
-        <p>Il est fondé entre les adhérents aux présents statuts une association à buts non
-          lucratifs, régie par la loi du 1er juillet 1901 et le décret du 16 août 1901 ainsi que
-          par les lois et décrets subséquents, une association visant à étendre son rayon
-          d’action au Sud Territoire de BELFORT, sur un secteur géographique couvrant
-          l’ensemble des bassins versants des rivières Cœuvatte, Suarcine et Vendeline et
-          ayant pour dénomination : <br>
-          Association Cœuvatte, Suarcine et Vendeline
-        </p>
+        <p v-html="article_association.acf.article_1"></p>
       </div>
        <div class="article_2">
          <h2>Article 2 : BUTS DE L'ASSOCIATION</h2>
-         <p>La découverte, l’information, la recherche et la sauvegarde du patrimoine des villages irrigués par les rivières Cœuvatte, Suarcine et Vendeline.</p>
+         <p v-html="article_association.acf.article_2"></p>
        </div>
     </div>
 
@@ -123,24 +103,38 @@
     </div>
 </template>
 <script>
-      import CFooter from '../components/c-footer.vue'
-      import CHeader from '../components/c-header.vue'
-      export default {
+import CFooter from '../components/c-footer.vue'
+import CHeader from '../components/c-header.vue'
+import axios from "axios";
+
+export default {
         components: {
           CFooter,
           CHeader,
         },
         data(){
           return {
+            contacts: [],
+            asso_presentations : [],
+            articles_association : [],
+            textes_rejoindre : [],
           }
         },
-        mounted(){
-          /*axios.get('http://localhost/normaludus - Copie/php/Utilitaires/Produit.php').then((response) => {
-              this.listeCategories = response.data;
-          });*/
+        mounted() {
+          axios.get('http://csv/wordpress/wp-json/wp/v2/asso_presentation').then((response) => {
+            this.asso_presentations = response.data;
+          });
+          axios.get('http://csv/wordpress/wp-json/wp/v2/contact').then((response) => {
+            this.contacts = response.data;
+          });
+          axios.get('http://csv/wordpress/wp-json/wp/v2/article_association').then((response) => {
+            this.articles_association = response.data;
+          });
+
+          axios.get('http://csv/wordpress/wp-json/wp/v2/texte_rejoindre').then((response) => {
+            this.textes_rejoindre = response.data;
+          });
         },
-        methods:{
-        }
       }
 </script>
 <style scoped>
@@ -172,4 +166,5 @@
 .contact h2{
   margin-left: 15px;
 }
+
 </style>
