@@ -5,21 +5,6 @@
   </div>
 </template>
 
-<script>
-  /*export default {
-    mounted() {
-      axios.post('tonurl/account', {
-        data: {
-          login: 'toto@gmail.com',
-          mdp: 'finfeoifi'
-        }
-      }).then((res) => {
-        localeStorage.token = res.token
-      })
-    }
-  }*/
-</script>
-
 <style>
 @import './assets/styles/style_mise_en_page.css';
 @import './assets/styles/styles_graphiques.css';
