@@ -49,7 +49,7 @@ export default {
       logos:[],
     }
   },
-  mounted(){   axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+  mounted(){   axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
     this.logos = response.data;
   });
 

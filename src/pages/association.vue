@@ -121,17 +121,17 @@ export default {
           }
         },
         mounted() {
-          axios.get('http://csv/wordpress/wp-json/wp/v2/asso_presentation').then((response) => {
+          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/asso_presentation').then((response) => {
             this.asso_presentations = response.data;
           });
-          axios.get('http://csv/wordpress/wp-json/wp/v2/contact').then((response) => {
+          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/contact').then((response) => {
             this.contacts = response.data;
           });
-          axios.get('http://csv/wordpress/wp-json/wp/v2/article_association').then((response) => {
+          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/article_association').then((response) => {
             this.articles_association = response.data;
           });
 
-          axios.get('http://csv/wordpress/wp-json/wp/v2/texte_rejoindre').then((response) => {
+          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/texte_rejoindre').then((response) => {
             this.textes_rejoindre = response.data;
           });
         },

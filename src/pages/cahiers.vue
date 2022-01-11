@@ -50,7 +50,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://csv/wordpress/wp-json/wp/v2/cahier').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/cahier').then((response) => {
       this.cahiers = response.data;
     });
   },

@@ -52,11 +52,11 @@ export default {
   },
 
   mounted() {
-    axios.get('http://csv/wordpress/wp-json/wp/v2/press_book').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/press_book').then((response) => {
       this.press_books = response.data;
     });
 
-    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
       this.logos = response.data;
     });
   },

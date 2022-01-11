@@ -26,7 +26,7 @@ export default {
     }
   },
   mounted(){
-    axios.get('http://csv/wordpress/wp-json/wp/v2/p_confidentialite').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/p_confidentialite').then((response) => {
       this.politiques_confidentalites = response.data;
     });
   },

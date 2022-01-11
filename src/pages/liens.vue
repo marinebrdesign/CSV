@@ -127,11 +127,11 @@ export default {
   },
 
   mounted() {
-    axios.get('http://csv/wordpress/wp-json/wp/v2/lien').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/lien').then((response) => {
       this.liens = response.data;
     });
 
-    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
       this.logos = response.data;
     });
   },

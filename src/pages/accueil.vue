@@ -92,15 +92,15 @@ export default {
   },
 
   mounted() {
-    axios.get('http://csv/wordpress/wp-json/wp/v2/actualite').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/actualite').then((response) => {
       this.actualites = response.data;
     });
 
-    axios.get('http://csv/wordpress/wp-json/wp/v2/bulletin').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/bulletin').then((response) => {
       this.bulletins = response.data;
     });
 
-    axios.get('http://csv/wordpress/wp-json/wp/v2/logo').then((response) => {
+    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
       this.logos = response.data;
     });
   },

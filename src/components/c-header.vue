@@ -109,25 +109,21 @@ ul {
   }
 
   .navbar__links {
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    width:0;
-    /*height:calc(110vh - 65px);*/
-    top:0;
-    right:0;
-    bottom: 0;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
     left: 0;
-    background:white;
-    transform: translateX(110%);
-    transition: all .5s ease-in-out;
-    z-index: 2;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    transform: translateX(200vw);
+    z-index: 4;
+    transition: all 1.5s;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
   }
   .show-nav .navbar__links {
-
     width:100vw;
     transform: translateX(0);
   }
@@ -142,7 +138,7 @@ ul {
   .navbar__link > a {
     display:block;
     padding:1rem;
-    font-size:50px;
+    font-size:35px;
     color:black;
     transition: all .4s ease-in-out;
   }
@@ -249,8 +245,5 @@ ul {
     color: white;
   }
 
-  .csv_2 {
-    display: none;
-  }
 }
 </style>
