@@ -50,7 +50,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/bulletin_editions').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/bulletin_editions').then((response) => {
       this.bulletins_editions = response.data;
     });
   },

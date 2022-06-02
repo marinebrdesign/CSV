@@ -3,7 +3,7 @@
 		<c-header></c-header>
 
 <main>
-  <h1>Achetez</h1>
+  <h1>Acheter</h1>
   <p>Ici, vous avez la possibilité d'acheter les livres,  les bulletins et les cahiers édités par l'association.</p>
 
   <div class="categorie">

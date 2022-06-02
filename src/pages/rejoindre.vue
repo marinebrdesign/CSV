@@ -76,7 +76,7 @@ export default {
   },
 
   mounted() {
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/rejoindre').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/rejoindre').then((response) => {
       this.rejoindre = response.data;
     });
   },
@@ -84,7 +84,7 @@ export default {
   methods:{
     sendEmail() {
       var text = document.getElementById('form-h1');
-      emailjs.sendForm('service_9ty2vj4', 'template_r9bk2or', this.$refs.form, 'user_kZqRub6aTgGjWbU0Zpz4d')
+      emailjs.sendForm('service_613t8ja', 'template_gg535z4', this.$refs.form, 'aTAH08CeWvYcMui3K')
           .then((result) => {
             console.log('SUCCESS!', result.text);
             this.modal = true;

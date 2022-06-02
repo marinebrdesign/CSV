@@ -167,11 +167,11 @@ export default {
     }
   },
   mounted() {
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/commune').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/commune').then((response) => {
       this.communes = response.data;
     });
 
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/logo').then((response) => {
       this.logos = response.data;
     });
   },

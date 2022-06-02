@@ -19,7 +19,7 @@
 
   <div id="ancre"></div>
   <h1 id="pb">PRESS BOOK</h1>
-  <p>Afin de consulter un press book, veuillez télécharger celui-ci à partir du bouton "Télécharger".</p>
+  <p>Afin de consulter notre press book, veuillez télécharger celui-ci à partir du bouton "Télécharger".</p>
   <div id="container_press_book">
     <div class="press_book" v-for="press_book in press_books" :key="press_book.id">
         <div class="img_pb">
@@ -52,11 +52,11 @@ export default {
   },
 
   mounted() {
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/press_book').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/press_book').then((response) => {
       this.press_books = response.data;
     });
 
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/logo').then((response) => {
       this.logos = response.data;
     });
   },

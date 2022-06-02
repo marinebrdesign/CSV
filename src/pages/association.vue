@@ -18,7 +18,7 @@
           <h4>E-MAIL</h4>
           <p>Secrétaire : <a :href="'mailto:' + contact.acf.mail_secretaire">{{contact.acf.mail_secretaire}}</a></p>
           <p>Trésorier : <a :href="'mailto:' + contact.acf.mail_tresorier">{{contact.acf.mail_tresorier}}</a></p>
-          <p>Édition C-S-V : <a :href="'mailto:' + contact.acf.mail_edition_csv">{{contact.acf.mail_edition_csv}}</a></p>
+          <p>Éditions CSV : <a :href="'mailto:' + contact.acf.mail_edition_csv">{{contact.acf.mail_edition_csv}}</a></p>
         </div>
 
         <div class="row">
@@ -60,7 +60,7 @@
     <div class="h2_form">
       <h2>ÉCRIVEZ-NOUS</h2>
     </div>
-    <form id="contact" action="mailto:marinebeurier22@gmail.com" method="post" enctype="text/plain">
+    <form id="contact" action="mailto:editions.csv@gmail.com" method="post" enctype="text/plain">
       <div class="nom">
         <input type="text" name="Nom" placeholder="Nom" required>
       </div>
@@ -121,17 +121,17 @@ export default {
           }
         },
         mounted() {
-          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/asso_presentation').then((response) => {
+          axios.get('https://csv-patrimoine.org/wp-json/wp/v2/asso_presentation').then((response) => {
             this.asso_presentations = response.data;
           });
-          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/contact').then((response) => {
+          axios.get('https://csv-patrimoine.org/wp-json/wp/v2/contact').then((response) => {
             this.contacts = response.data;
           });
-          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/article_association').then((response) => {
+          axios.get('https://csv-patrimoine.org/wp-json/wp/v2/article_association').then((response) => {
             this.articles_association = response.data;
           });
 
-          axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/texte_rejoindre').then((response) => {
+          axios.get('https://csv-patrimoine.org/wp-json/wp/v2/texte_rejoindre').then((response) => {
             this.textes_rejoindre = response.data;
           });
         },

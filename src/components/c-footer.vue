@@ -1,7 +1,7 @@
 <template>
     <div style="background-color: black">
         <footer>
-            <h4>ASSOCIATION <br>Cæuvatte-Suarcine-Vendeline</h4>
+            <h4>ASSOCIATION <br>Cœuvatte-Suarcine-Vendeline</h4>
           <div class="footer_row">
           <ul class="nav">
               <li>
@@ -49,7 +49,7 @@ export default {
       logos:[],
     }
   },
-  mounted(){   axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
+  mounted(){   axios.get('https://csv-patrimoine.org/wp-json/wp/v2/logo').then((response) => {
     this.logos = response.data;
   });
 
@@ -64,5 +64,9 @@ h4 {
     margin-top: 0;
     font-family: Lato;
     font-size: 18px;
+}
+
+img {
+  height: auto;
 }
 </style>

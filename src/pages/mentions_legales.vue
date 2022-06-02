@@ -26,7 +26,7 @@ export default {
     }
   },
   mounted(){
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/mentions_legales').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/mentions_legales').then((response) => {
       this.mentions_legales = response.data;
     });
   },

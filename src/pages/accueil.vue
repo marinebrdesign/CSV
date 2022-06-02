@@ -10,7 +10,7 @@
         </div>
         <h1>CŒUVATTE-SUARCINE-VENDELINE</h1>
         <p>Bienvenue sur le site de l’association Cœuvatte-Suarcine-Vendeline (CSV) :
-          <br>Histoire et patrimoine du sud-territoire de Belfort</p>
+          <br>Histoire et patrimoine du Sud-Territoire de Belfort</p>
         <div class="fleche">
           <a href="#ancre"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg></a>
         </div>
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <h1 id="h1_actualites">LES ACTUALITÉES DE L'association Cœuvatte Suarcine Vendeline</h1>
+    <h1 id="h1_actualites">LES ACTUALITÉS DE L'association Cœuvatte Suarcine Vendeline</h1>
     <div class="logo_actu">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 147 145">
         <g id="newspaper" transform="translate(-887 -2038)">
@@ -92,15 +92,15 @@ export default {
   },
 
   mounted() {
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/actualite').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/actualite').then((response) => {
       this.actualites = response.data;
     });
 
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/bulletin').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/bulletin').then((response) => {
       this.bulletins = response.data;
     });
 
-    axios.get('https://csv-admin.marinebeurier.fr/wp-json/wp/v2/logo').then((response) => {
+    axios.get('https://csv-patrimoine.org/wp-json/wp/v2/logo').then((response) => {
       this.logos = response.data;
     });
   },

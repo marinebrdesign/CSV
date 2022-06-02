@@ -201,8 +201,14 @@ html, body {
 }
 
 .logo {
-    width: 187px;
-    margin: 0 auto 40px auto;
+    width: 20vh;
+    margin: 0 auto 20px auto;
+    height: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
 }
 
 #csv {
@@ -881,6 +887,11 @@ margin: 20px;
         font-size: 22px;
     }
 
+    .presentation {
+        position: relative;
+        top: 50px;
+    }
+
     #communes {
         height: 380px;
     }
@@ -1028,11 +1039,6 @@ margin: 20px;
 
     .presentation h1 {
         font-size: 20px;
-    }
-
-    .logo img {
-        width: 125px;
-        height: 125px;
     }
 
     .logo {
